@@ -1,0 +1,5 @@
+E:\Project\WorkAttire\attirelib\obj\Debug\attirelib.csprojResolveAssemblyReference.cache
+E:\Project\WorkAttire\attirelib\bin\Debug\attirelib.dll
+E:\Project\WorkAttire\attirelib\bin\Debug\attirelib.pdb
+E:\Project\WorkAttire\attirelib\obj\Debug\attirelib.dll
+E:\Project\WorkAttire\attirelib\obj\Debug\attirelib.pdb
