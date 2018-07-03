@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace attirelib
@@ -19,6 +20,19 @@ namespace attirelib
             ResponManager = 30,
             GiveAttire = 40
             
+        }
+        public static string getId(string s)
+        {
+            Random r = new Random();
+            string iss = s + DateTime.Now.ToString() + r.Next().ToString();
+            MD5 m = MD5.Create();
+            byte[] data = m.ComputeHash(Encoding.Default.GetBytes(iss));
+            StringBuilder sB = new StringBuilder();
+            for (int i = 0; i < data.Length; i++)
+            {
+                sB.Append(data[i].ToString("x2"));
+            }
+            return sB.ToString();
         }
     }
 }
