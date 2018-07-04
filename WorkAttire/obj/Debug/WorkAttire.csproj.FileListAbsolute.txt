@@ -5,6 +5,8 @@ E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.Properties.Resources.resou
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.csproj.GenerateResource.Cache
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.exe
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.pdb
-E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.Form1.resources
 E:\Project\WorkAttire\WorkAttire\bin\Debug\attirelib.dll
 E:\Project\WorkAttire\WorkAttire\bin\Debug\attirelib.pdb
+E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fAddAttire.resources
+E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fEmployes.resources
+E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fDateTime.resources

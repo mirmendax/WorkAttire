@@ -142,6 +142,7 @@ namespace attirelib
             {
                 new Log("Error load Attires: " + ex.Message);
             }
+            file.Close();
         }
 
         public void Save()

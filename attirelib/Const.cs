@@ -11,6 +11,8 @@ namespace attirelib
         public static string FILE_EMPS = "emps.wa";
         public static string FILE_ATTIRE = "arhive.wa";
         public static string FILE_LOG = "error.log";
+        public static string FORMAT_DATA = "dd.MM.yy";
+        public static string FORMAT_TIME = "HH.mm";
         public static int DAYS_ATTIRE = 15;
         public enum RULE
         {

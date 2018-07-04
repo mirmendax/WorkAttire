@@ -79,6 +79,7 @@ namespace attirelib
             {
                 new Log("Error load Emps: " + ex.Message);
             }
+            file.Close();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace attirelib
         /// <summary>
         /// Группа по эл.безопасности
         /// </summary>
-        public int Group = 1;
+        public int Group = 0;
         /// <summary>
         /// Выдающий наряд
         /// </summary>
@@ -53,7 +53,7 @@ namespace attirelib
                     break;
                 case 5: result = this.Name + " гр V";
                     break;
-                default: result = "none";
+                default: result = "ФИО";
                     break;
             }
             return result;
@@ -63,7 +63,7 @@ namespace attirelib
         public Emp()
         {
             Name = "";
-            Group = 1;
+            Group = 0;
             RuleGiveAttire = false;
             RuleResponManager = false;
             RuleForePerson = false;
