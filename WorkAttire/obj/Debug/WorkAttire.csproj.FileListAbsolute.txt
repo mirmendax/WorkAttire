@@ -6,3 +6,5 @@ E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.csproj.GenerateResource.Ca
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.exe
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.pdb
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.Form1.resources
+E:\Project\WorkAttire\WorkAttire\bin\Debug\attirelib.dll
+E:\Project\WorkAttire\WorkAttire\bin\Debug\attirelib.pdb

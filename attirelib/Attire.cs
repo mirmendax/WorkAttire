@@ -7,12 +7,13 @@ using System.Security.Cryptography;
 
 namespace attirelib
 {
+    [Serializable]
     public class Attire
     {
         /// <summary>
         /// Уникальный ИД
         /// </summary>
-        public string ID = Const.getId("");
+        public string ID = Const.getId();
         /// <summary>
         /// Номер зарегистрированного наряда
         /// </summary>
@@ -57,10 +58,18 @@ namespace attirelib
         /// Выдающий наряд
         /// </summary>
         public Emp GiveAttire = new Emp();
+        /// <summary>
+        /// Кол-во допусков
+        /// </summary>
+        public int Count = 0;
+        /// <summary>
+        /// Полностью закрытый наряд
+        /// </summary>
+        public bool isClosed = false;
         
         public Attire()
         {
-            ID = Const.getId("");
+            ID = Const.getId();
         }
 
         #region Override
@@ -81,7 +90,11 @@ namespace attirelib
             this.ID = data.ID;
             this.ResponseManager = data.ResponseManager;
             this.ForePerson = data.ForePerson;
-            this.Team = data.Team;
+            this.Team.Clear();
+            foreach (var item in data.Team)
+            {
+                this.Team.Add(item);
+            }
             this.Estr = data.Estr;
             this.Date_Time_Begin = data.Date_Time_Begin;
             this.Date_Time_End = data.Date_Time_End;
@@ -89,7 +102,37 @@ namespace attirelib
             this.Spec_Insrtrucion = data.Spec_Insrtrucion;
             this.Date_Time_Give = data.Date_Time_Give;
             this.GiveAttire = data.GiveAttire;
+            this.Count = data.Count;
+            this.isClosed = data.isClosed;
         }
+
+        public Attire(Emp rManager, Emp fPerson, List<Emp> team, string estr, DateTime dtBegin, 
+            DateTime dtEnd, List<Sec_Measures> sMeas, string sInstr, DateTime dtGive, Emp gAttire, int count=0, bool isclosed = false)
+        {
+            this.ID = Const.getId(gAttire.ToString()+estr+sInstr);
+            this.ResponseManager = rManager;
+            this.ForePerson = fPerson;
+            this.Team.Clear();
+
+            foreach (var item in team)
+            {
+                this.Team.Add(item);
+            }
+            this.Estr = estr;
+            this.Date_Time_Begin = dtBegin;
+            this.Date_Time_End = dtEnd;
+            this.Sec_Meas.Clear();
+            foreach (var item in sMeas)
+            {
+                Sec_Meas.Add(item);
+            }
+            this.Spec_Insrtrucion = sInstr;
+            this.Date_Time_Give = dtGive;
+            this.GiveAttire = gAttire;
+            this.Count = count;
+            this.isClosed = isclosed;
+        }
+
 
     }
 }

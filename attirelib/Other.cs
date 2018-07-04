@@ -5,12 +5,13 @@ using System.Text;
 
 namespace attirelib
 {
+    [Serializable]
     /// <summary>
     /// Меры безопасности
     /// </summary>
     public class Sec_Measures
     {
-        public string ID = Const.getId("");
+        public string ID = Const.getId();
         /// <summary>
         /// Где отключить
         /// </summary>

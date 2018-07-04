@@ -1,4 +1,5 @@
-﻿using System;
+﻿using attirelib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +10,16 @@ using System.Windows.Forms;
 
 namespace WorkAttire
 {
-    public partial class Form1 : Form
+    public partial class fAddAttire : Form
     {
-        public Form1()
+        public fAddAttire()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label1.Text = DateTime.Now.ToString();
+            
         }
     }
 }

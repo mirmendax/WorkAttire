@@ -14,14 +14,29 @@ namespace attirelib
         public static int DAYS_ATTIRE = 15;
         public enum RULE
         {
+            /// <summary>
+            /// Пустой
+            /// </summary>
             None = 0,
+            /// <summary>
+            /// Член бригады
+            /// </summary>
             Other = 10,
+            /// <summary>
+            /// Производитель
+            /// </summary>
             ForePerson = 20,
+            /// <summary>
+            /// Ответственный руководитель
+            /// </summary>
             ResponManager = 30,
+            /// <summary>
+            /// Выдающий наряд
+            /// </summary>
             GiveAttire = 40
             
         }
-        public static string getId(string s)
+        public static string getId(string s = "")
         {
             Random r = new Random();
             string iss = s + DateTime.Now.ToString() + r.Next().ToString();

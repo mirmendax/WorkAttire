@@ -17,7 +17,11 @@ namespace attirelib
         {
             Employees = new List<Emp>();
         }
-
+        /// <summary>
+        /// Вывести список работников по Роли
+        /// </summary>
+        /// <param name="rule">Роль</param>
+        /// <returns></returns>
         public List<Emp> EmployeesOfRules(Const.RULE rule)
         {
             List<Emp> result = new List<Emp>();

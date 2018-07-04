@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attire.cs" />
+    <Compile Include="Attires.cs" />
     <Compile Include="Const.cs" />
     <Compile Include="Emp.cs" />
     <Compile Include="Emps.cs" />
