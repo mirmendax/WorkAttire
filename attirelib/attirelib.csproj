@@ -44,6 +44,7 @@
     <Compile Include="Const.cs" />
     <Compile Include="Emp.cs" />
     <Compile Include="Emps.cs" />
+    <Compile Include="Excel.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Other.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

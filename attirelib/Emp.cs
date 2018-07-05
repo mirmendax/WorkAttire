@@ -43,15 +43,15 @@ namespace attirelib
             string result;
             switch (this.Group)
             {
-                case 1: result = this.Name + " гр I";
+                case 1: result = this.Name + " I гр.";
                     break;
-                case 2: result = this.Name + " гр II";
+                case 2: result = this.Name + " II гр.";
                     break;
-                case 3: result = this.Name + " гр III";
+                case 3: result = this.Name + " III гр.";
                     break;
-                case 4: result = this.Name + " гр IV";
+                case 4: result = this.Name + " IV гр.";
                     break;
-                case 5: result = this.Name + " гр V";
+                case 5: result = this.Name + " V гр.";
                     break;
                 default: result = "ФИО";
                     break;

@@ -68,9 +68,11 @@
             this.tBoxInstr = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.tBoxMeas = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
+            this.addOrderbtn = new System.Windows.Forms.Button();
+            this.lBoxViewR = new System.Windows.Forms.ListBox();
+            this.lBoxViewL = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -433,6 +435,7 @@
             this.button9.Text = "Дата";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // lDT_End
             // 
@@ -458,6 +461,7 @@
             this.button8.Text = "Дата";
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // label11
             // 
@@ -511,7 +515,8 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.tBoxMeas);
+            this.groupBox8.Controls.Add(this.lBoxViewR);
+            this.groupBox8.Controls.Add(this.lBoxViewL);
             this.groupBox8.Controls.Add(this.label15);
             this.groupBox8.Controls.Add(this.button11);
             this.groupBox8.Location = new System.Drawing.Point(12, 368);
@@ -519,18 +524,6 @@
             this.groupBox8.Size = new System.Drawing.Size(568, 272);
             this.groupBox8.TabIndex = 36;
             this.groupBox8.TabStop = false;
-            // 
-            // tBoxMeas
-            // 
-            this.tBoxMeas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBoxMeas.Location = new System.Drawing.Point(9, 55);
-            this.tBoxMeas.Multiline = true;
-            this.tBoxMeas.Name = "tBoxMeas";
-            this.tBoxMeas.ReadOnly = true;
-            this.tBoxMeas.Size = new System.Drawing.Size(552, 211);
-            this.tBoxMeas.TabIndex = 2;
-            this.tBoxMeas.Text = "РУ-13,8 кВ, 8 секция\t\t\tОткл. Р-16Г.\r\n\t\t\t\t\tВкл. 1з16ТСВ, 2з-16ТСВ\r\n\t\t\t\t\tВкл. з-16Г" +
-    "";
             // 
             // label15
             // 
@@ -554,12 +547,48 @@
             this.button11.TabIndex = 4;
             this.button11.Text = "Изменить";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // addOrderbtn
+            // 
+            this.addOrderbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addOrderbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addOrderbtn.ImageIndex = 10;
+            this.addOrderbtn.ImageList = this.imageList1;
+            this.addOrderbtn.Location = new System.Drawing.Point(595, 384);
+            this.addOrderbtn.Name = "addOrderbtn";
+            this.addOrderbtn.Size = new System.Drawing.Size(284, 51);
+            this.addOrderbtn.TabIndex = 37;
+            this.addOrderbtn.Text = "Заполнить";
+            this.addOrderbtn.UseVisualStyleBackColor = true;
+            this.addOrderbtn.Click += new System.EventHandler(this.addOrderbtn_Click);
+            // 
+            // lBoxViewR
+            // 
+            this.lBoxViewR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lBoxViewR.FormattingEnabled = true;
+            this.lBoxViewR.ItemHeight = 15;
+            this.lBoxViewR.Location = new System.Drawing.Point(274, 60);
+            this.lBoxViewR.Name = "lBoxViewR";
+            this.lBoxViewR.Size = new System.Drawing.Size(243, 199);
+            this.lBoxViewR.TabIndex = 9;
+            // 
+            // lBoxViewL
+            // 
+            this.lBoxViewL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lBoxViewL.FormattingEnabled = true;
+            this.lBoxViewL.ItemHeight = 15;
+            this.lBoxViewL.Location = new System.Drawing.Point(32, 60);
+            this.lBoxViewL.Name = "lBoxViewL";
+            this.lBoxViewL.Size = new System.Drawing.Size(243, 199);
+            this.lBoxViewL.TabIndex = 10;
             // 
             // fAddAttire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 781);
+            this.Controls.Add(this.addOrderbtn);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -631,9 +660,11 @@
         private System.Windows.Forms.TextBox tBoxInstr;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox tBoxMeas;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button addOrderbtn;
+        private System.Windows.Forms.ListBox lBoxViewR;
+        private System.Windows.Forms.ListBox lBoxViewL;
 
     }
 }

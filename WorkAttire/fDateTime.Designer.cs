@@ -44,12 +44,13 @@
             this.monthCalendar1.Location = new System.Drawing.Point(26, 5);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
+            this.monthCalendar1.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateSelected);
             // 
             // nHour
             // 
             this.nHour.Location = new System.Drawing.Point(34, 176);
             this.nHour.Maximum = new decimal(new int[] {
-            24,
+            23,
             0,
             0,
             0});
@@ -96,6 +97,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -106,6 +108,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Закрыть";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // fDateTime
             // 
@@ -121,6 +124,7 @@
             this.Controls.Add(this.monthCalendar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fDateTime";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Дата и время";
             this.Load += new System.EventHandler(this.fDateTime_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nHour)).EndInit();

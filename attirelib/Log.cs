@@ -21,7 +21,7 @@ namespace attirelib
             }
             StreamWriter addlog = File.AppendText(Const.FILE_LOG);
 
-            addlog.WriteLine("[" + DateTime.Now.ToString("d.MM.yyyy") + "]" + sLog);
+            addlog.WriteLine("[" + DateTime.Now.ToString("d.MM.yyyy") +"("+ DateTime.Now.ToString("HH:mm")+")]" + sLog);
             addlog.Close();
         }
     }

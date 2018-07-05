@@ -13,7 +13,8 @@ namespace attirelib
         public static string FILE_LOG = "error.log";
         public static string FORMAT_DATA = "dd.MM.yy";
         public static string FORMAT_TIME = "HH.mm";
-        public static int DAYS_ATTIRE = 15;
+        public static string DOC_ATTIRE = "attire.xltx";
+        public static int DAYS_ATTIRE = 14;
         public enum RULE
         {
             /// <summary>

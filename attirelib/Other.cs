@@ -19,6 +19,11 @@ namespace attirelib
         /// <summary>
         /// Что отключить
         /// </summary>
-        public string What = string.Empty;
+        public List<string> What = new List<string>();
+
+        public Sec_Measures()
+        {
+            ID = Const.getId();
+        }
     }
 }
