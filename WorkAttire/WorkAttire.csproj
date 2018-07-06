@@ -50,6 +50,12 @@
     <Compile Include="fAddAttire.Designer.cs">
       <DependentUpon>fAddAttire.cs</DependentUpon>
     </Compile>
+    <Compile Include="fAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddUser.Designer.cs">
+      <DependentUpon>fAddUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDateTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fAddAttire.resx">
       <DependentUpon>fAddAttire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fAddUser.resx">
+      <DependentUpon>fAddUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDateTime.resx">
       <DependentUpon>fDateTime.cs</DependentUpon>

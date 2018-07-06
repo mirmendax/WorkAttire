@@ -17,6 +17,8 @@ namespace WorkAttire
         fDateTime fData = new fDateTime();
         fSec_Measure fSec = new fSec_Measure();
         #endregion
+        /*  Private Team   */
+        private bool Remove_Emp_Team = false;
         /*  private Measure */
         private List<string> meas_l = new List<string>();
         private List<string> meas_r = new List<string>();
@@ -330,6 +332,53 @@ namespace WorkAttire
                 meas_r = fSec.rView;
                 onRewrite();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CurrentAttire.ResponseManager = new Emp();
+            onRewrite();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            CurrentAttire.ForePerson = new Emp();
+            onRewrite();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            CurrentAttire.GiveAttire = new Emp();
+            onRewrite();
+        }
+
+        private void lBoxTeam_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListBox lb = sender as ListBox;
+            if (Remove_Emp_Team)
+            {
+
+                int i = lb.SelectedIndex;
+
+                if (i != -1)
+                    CurrentAttire.Team.Remove(CurrentAttire.Team[i]);
+
+                delchrbtn.Text = "-";
+                Remove_Emp_Team = false;
+            }
+            onRewrite();
+        }
+
+        private void delchrbtn_Click(object sender, EventArgs e)
+        {
+            delchrbtn.Text = "( - )";
+            Remove_Emp_Team = true;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            CurrentAttire.Team.Clear();
+            onRewrite();
         }
     }
 }

@@ -68,11 +68,11 @@
             this.tBoxInstr = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lBoxViewR = new System.Windows.Forms.ListBox();
+            this.lBoxViewL = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.addOrderbtn = new System.Windows.Forms.Button();
-            this.lBoxViewR = new System.Windows.Forms.ListBox();
-            this.lBoxViewL = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -155,6 +155,7 @@
             this.button2.Size = new System.Drawing.Size(35, 35);
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -178,6 +179,7 @@
             this.button3.Size = new System.Drawing.Size(35, 35);
             this.button3.TabIndex = 3;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label3
             // 
@@ -237,6 +239,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "Отчистить список";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // delchrbtn
             // 
@@ -251,6 +254,7 @@
             this.delchrbtn.TabIndex = 15;
             this.delchrbtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.delchrbtn.UseVisualStyleBackColor = true;
+            this.delchrbtn.Click += new System.EventHandler(this.delchrbtn_Click);
             // 
             // addchrbtn
             // 
@@ -273,6 +277,7 @@
             this.lBoxTeam.Name = "lBoxTeam";
             this.lBoxTeam.Size = new System.Drawing.Size(247, 95);
             this.lBoxTeam.TabIndex = 13;
+            this.lBoxTeam.SelectedIndexChanged += new System.EventHandler(this.lBoxTeam_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -364,6 +369,7 @@
             this.button6.Size = new System.Drawing.Size(35, 35);
             this.button6.TabIndex = 3;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // label7
             // 
@@ -525,6 +531,26 @@
             this.groupBox8.TabIndex = 36;
             this.groupBox8.TabStop = false;
             // 
+            // lBoxViewR
+            // 
+            this.lBoxViewR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lBoxViewR.FormattingEnabled = true;
+            this.lBoxViewR.ItemHeight = 15;
+            this.lBoxViewR.Location = new System.Drawing.Point(274, 60);
+            this.lBoxViewR.Name = "lBoxViewR";
+            this.lBoxViewR.Size = new System.Drawing.Size(243, 199);
+            this.lBoxViewR.TabIndex = 9;
+            // 
+            // lBoxViewL
+            // 
+            this.lBoxViewL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lBoxViewL.FormattingEnabled = true;
+            this.lBoxViewL.ItemHeight = 15;
+            this.lBoxViewL.Location = new System.Drawing.Point(32, 60);
+            this.lBoxViewL.Name = "lBoxViewL";
+            this.lBoxViewL.Size = new System.Drawing.Size(243, 199);
+            this.lBoxViewL.TabIndex = 10;
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -562,26 +588,6 @@
             this.addOrderbtn.Text = "Заполнить";
             this.addOrderbtn.UseVisualStyleBackColor = true;
             this.addOrderbtn.Click += new System.EventHandler(this.addOrderbtn_Click);
-            // 
-            // lBoxViewR
-            // 
-            this.lBoxViewR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lBoxViewR.FormattingEnabled = true;
-            this.lBoxViewR.ItemHeight = 15;
-            this.lBoxViewR.Location = new System.Drawing.Point(274, 60);
-            this.lBoxViewR.Name = "lBoxViewR";
-            this.lBoxViewR.Size = new System.Drawing.Size(243, 199);
-            this.lBoxViewR.TabIndex = 9;
-            // 
-            // lBoxViewL
-            // 
-            this.lBoxViewL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lBoxViewL.FormattingEnabled = true;
-            this.lBoxViewL.ItemHeight = 15;
-            this.lBoxViewL.Location = new System.Drawing.Point(32, 60);
-            this.lBoxViewL.Name = "lBoxViewL";
-            this.lBoxViewL.Size = new System.Drawing.Size(243, 199);
-            this.lBoxViewL.TabIndex = 10;
             // 
             // fAddAttire
             // 
