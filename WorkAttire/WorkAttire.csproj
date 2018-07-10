@@ -56,6 +56,12 @@
     <Compile Include="fAddUser.Designer.cs">
       <DependentUpon>fAddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="fArhive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fArhive.Designer.cs">
+      <DependentUpon>fArhive.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDateTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fAddUser.resx">
       <DependentUpon>fAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fArhive.resx">
+      <DependentUpon>fArhive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDateTime.resx">
       <DependentUpon>fDateTime.cs</DependentUpon>

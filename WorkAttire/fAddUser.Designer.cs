@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAddUser));
             this.bDelEmp = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.bCancel = new System.Windows.Forms.Button();
             this.bSave = new System.Windows.Forms.Button();
@@ -44,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lBoxListEmp = new System.Windows.Forms.ListBox();
             this.cBoxResponManager = new System.Windows.Forms.CheckBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nBoxGroup)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +60,25 @@
             this.bDelEmp.TabIndex = 27;
             this.bDelEmp.Text = "Удалить";
             this.bDelEmp.UseVisualStyleBackColor = true;
+            this.bDelEmp.Click += new System.EventHandler(this.bDelEmp_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "11.png");
+            this.imageList1.Images.SetKeyName(1, "12.png");
+            this.imageList1.Images.SetKeyName(2, "17.png");
+            this.imageList1.Images.SetKeyName(3, "18.png");
+            this.imageList1.Images.SetKeyName(4, "19.png");
+            this.imageList1.Images.SetKeyName(5, "20.png");
+            this.imageList1.Images.SetKeyName(6, "21.png");
+            this.imageList1.Images.SetKeyName(7, "29.png");
+            this.imageList1.Images.SetKeyName(8, "36.png");
+            this.imageList1.Images.SetKeyName(9, "41.png");
+            this.imageList1.Images.SetKeyName(10, "43.png");
+            this.imageList1.Images.SetKeyName(11, "54.png");
+            this.imageList1.Images.SetKeyName(12, "98.png");
             // 
             // label3
             // 
@@ -85,6 +104,7 @@
             this.bCancel.TabIndex = 25;
             this.bCancel.Text = "Отмена";
             this.bCancel.UseVisualStyleBackColor = true;
+            this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
             // 
             // bSave
             // 
@@ -98,6 +118,7 @@
             this.bSave.TabIndex = 24;
             this.bSave.Text = "Сохранить";
             this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
             // bEditEmp
             // 
@@ -111,6 +132,7 @@
             this.bEditEmp.TabIndex = 23;
             this.bEditEmp.Text = "Изменить";
             this.bEditEmp.UseVisualStyleBackColor = true;
+            this.bEditEmp.Click += new System.EventHandler(this.bEditEmp_Click);
             // 
             // bAddEmp
             // 
@@ -124,6 +146,7 @@
             this.bAddEmp.TabIndex = 22;
             this.bAddEmp.Text = "Добавить";
             this.bAddEmp.UseVisualStyleBackColor = true;
+            this.bAddEmp.Click += new System.EventHandler(this.bAddEmp_Click);
             // 
             // nBoxGroup
             // 
@@ -189,6 +212,7 @@
             this.lBoxListEmp.Name = "lBoxListEmp";
             this.lBoxListEmp.Size = new System.Drawing.Size(286, 342);
             this.lBoxListEmp.TabIndex = 15;
+            this.lBoxListEmp.SelectedIndexChanged += new System.EventHandler(this.lBoxListEmp_SelectedIndexChanged);
             // 
             // cBoxResponManager
             // 
@@ -199,24 +223,6 @@
             this.cBoxResponManager.TabIndex = 28;
             this.cBoxResponManager.Text = "Ответственный руководитель  (@)";
             this.cBoxResponManager.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "11.png");
-            this.imageList1.Images.SetKeyName(1, "12.png");
-            this.imageList1.Images.SetKeyName(2, "17.png");
-            this.imageList1.Images.SetKeyName(3, "18.png");
-            this.imageList1.Images.SetKeyName(4, "19.png");
-            this.imageList1.Images.SetKeyName(5, "20.png");
-            this.imageList1.Images.SetKeyName(6, "21.png");
-            this.imageList1.Images.SetKeyName(7, "29.png");
-            this.imageList1.Images.SetKeyName(8, "36.png");
-            this.imageList1.Images.SetKeyName(9, "41.png");
-            this.imageList1.Images.SetKeyName(10, "43.png");
-            this.imageList1.Images.SetKeyName(11, "54.png");
-            this.imageList1.Images.SetKeyName(12, "98.png");
             // 
             // fAddUser
             // 
@@ -239,7 +245,7 @@
             this.Controls.Add(this.lBoxListEmp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fAddUser";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работники";
             this.Load += new System.EventHandler(this.fAddUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nBoxGroup)).EndInit();

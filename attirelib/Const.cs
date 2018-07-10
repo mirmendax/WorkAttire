@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -11,10 +12,13 @@ namespace attirelib
         public static string FILE_EMPS = "emps.wa";
         public static string FILE_ATTIRE = "arhive.wa";
         public static string FILE_LOG = "error.log";
+        public static string FILE_VERSION = "version";
         public static string FORMAT_DATA = "dd.MM.yy";
         public static string FORMAT_TIME = "HH.mm";
         public static string DOC_ATTIRE = "attire.xltx";
         public static int DAYS_ATTIRE = 14;
+        public static string ABOUT_FORMAT = "WorkAttire {0} Programming [MIR] Mendax (c) 2006-2018// СТСУ уч. ТАиВ";
+        public static string BR_OUT_DIAPOSON = "В бригаде достаточно членов!";
         public enum RULE
         {
             /// <summary>
@@ -51,6 +55,24 @@ namespace attirelib
                 sB.Append(data[i].ToString("x2"));
             }
             return sB.ToString();
+        }
+        public static string Version()
+        {
+            string result = "";
+            if (File.Exists(FILE_VERSION))
+            {
+                FileStream fver = File.Open(FILE_VERSION, FileMode.Open);
+                byte[] ver = new byte[fver.Length];
+                fver.Read(ver, 0, (int)fver.Length);
+                fver.Close();
+                string v = Encoding.ASCII.GetString(ver, 0, ver.Length);
+                result = "v"+v;
+            }
+            else
+            {
+                result = "v1.0a";
+            }
+            return result;
         }
     }
 }

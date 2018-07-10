@@ -73,6 +73,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.addOrderbtn = new System.Windows.Forms.Button();
+            this.EditEmpButton = new System.Windows.Forms.Button();
+            this.lAbout = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -347,7 +349,7 @@
             // datebtn
             // 
             this.datebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.datebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.datebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.datebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.datebtn.ImageIndex = 11;
             this.datebtn.ImageList = this.imageList1;
@@ -411,7 +413,7 @@
             this.groupBox6.Controls.Add(this.button8);
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.lDT_Begin);
-            this.groupBox6.Location = new System.Drawing.Point(586, 200);
+            this.groupBox6.Location = new System.Drawing.Point(586, 168);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(299, 167);
             this.groupBox6.TabIndex = 35;
@@ -430,7 +432,7 @@
             // button9
             // 
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.ImageIndex = 11;
             this.button9.ImageList = this.imageList1;
@@ -456,7 +458,7 @@
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.ImageIndex = 11;
             this.button8.ImageList = this.imageList1;
@@ -564,6 +566,7 @@
             // button11
             // 
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.ImageKey = "43.png";
             this.button11.ImageList = this.imageList1;
@@ -578,10 +581,12 @@
             // addOrderbtn
             // 
             this.addOrderbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addOrderbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addOrderbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.addOrderbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addOrderbtn.ImageIndex = 10;
             this.addOrderbtn.ImageList = this.imageList1;
-            this.addOrderbtn.Location = new System.Drawing.Point(595, 384);
+            this.addOrderbtn.Location = new System.Drawing.Point(595, 366);
             this.addOrderbtn.Name = "addOrderbtn";
             this.addOrderbtn.Size = new System.Drawing.Size(284, 51);
             this.addOrderbtn.TabIndex = 37;
@@ -589,11 +594,40 @@
             this.addOrderbtn.UseVisualStyleBackColor = true;
             this.addOrderbtn.Click += new System.EventHandler(this.addOrderbtn_Click);
             // 
+            // EditEmpButton
+            // 
+            this.EditEmpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditEmpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EditEmpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EditEmpButton.ImageIndex = 0;
+            this.EditEmpButton.ImageList = this.imageList1;
+            this.EditEmpButton.Location = new System.Drawing.Point(595, 493);
+            this.EditEmpButton.Name = "EditEmpButton";
+            this.EditEmpButton.Size = new System.Drawing.Size(284, 37);
+            this.EditEmpButton.TabIndex = 40;
+            this.EditEmpButton.Text = "Список работников";
+            this.EditEmpButton.UseVisualStyleBackColor = true;
+            this.EditEmpButton.Click += new System.EventHandler(this.EditEmpButton_Click);
+            // 
+            // lAbout
+            // 
+            this.lAbout.AutoSize = true;
+            this.lAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lAbout.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lAbout.Location = new System.Drawing.Point(14, 765);
+            this.lAbout.Name = "lAbout";
+            this.lAbout.Size = new System.Drawing.Size(110, 13);
+            this.lAbout.TabIndex = 41;
+            this.lAbout.Text = "Programming MIR ";
+            // 
             // fAddAttire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 781);
+            this.Controls.Add(this.lAbout);
+            this.Controls.Add(this.EditEmpButton);
             this.Controls.Add(this.addOrderbtn);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
@@ -623,6 +657,7 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -671,6 +706,8 @@
         private System.Windows.Forms.Button addOrderbtn;
         private System.Windows.Forms.ListBox lBoxViewR;
         private System.Windows.Forms.ListBox lBoxViewL;
+        private System.Windows.Forms.Button EditEmpButton;
+        private System.Windows.Forms.Label lAbout;
 
     }
 }

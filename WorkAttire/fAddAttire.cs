@@ -12,10 +12,12 @@ namespace WorkAttire
 {
     public partial class fAddAttire : Form
     {
+        const string VER = "1.0a";
         #region Forms
         fEmployes fEmpl = new fEmployes();
         fDateTime fData = new fDateTime();
         fSec_Measure fSec = new fSec_Measure();
+        fAddUser fUser = new fAddUser();
         #endregion
         /*  Private Team   */
         private bool Remove_Emp_Team = false;
@@ -28,7 +30,11 @@ namespace WorkAttire
 
         public Attire CurrentAttire = new Attire();
         /*            */
-
+        /// <summary>
+        /// Write excel table
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         private bool AddAttire(Attire a)
         {
             bool result = false;
@@ -205,7 +211,7 @@ namespace WorkAttire
         {
             ListAttire.Load();
             ListEmps.Load();
-            ListEmps.Save();
+            lAbout.Text = string.Format(Const.ABOUT_FORMAT, Const.Version());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -243,7 +249,9 @@ namespace WorkAttire
             fEmpl.ShowDialog();
             if (fEmpl.SelEmp != null)
             {
-                CurrentAttire.Team.Add(fEmpl.SelEmp);
+                if (CurrentAttire.Team.Count <= 3)
+                    CurrentAttire.Team.Add(fEmpl.SelEmp);
+                
             }
             if (fEmpl.isSelected)
                 onRewrite();
@@ -318,6 +326,10 @@ namespace WorkAttire
             CurrentAttire.Estr = tBoxEstr.Text;
             CurrentAttire.Spec_Insrtrucion = tBoxInstr.Text;
             AddAttire(CurrentAttire);
+            ListAttire.AddAttire(CurrentAttire);
+            ListAttire.Save();
+            CurrentAttire = new Attire();
+            onRewrite();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -379,6 +391,27 @@ namespace WorkAttire
         {
             CurrentAttire.Team.Clear();
             onRewrite();
+        }
+
+
+        private void EditEmpButton_Click(object sender, EventArgs e)
+        {
+            fUser.ListEmp.Clear();
+            foreach (var item in ListEmps.Employees)
+            {
+                fUser.ListEmp.Add(item);
+            }
+            fUser.onLoad();
+            fUser.ShowDialog();
+            if (fUser.isSave)
+            {
+                ListEmps.Employees.Clear();
+                foreach (var item in fUser.NewListEmp)
+                {
+                    ListEmps.Employees.Add(item);
+                }
+                ListEmps.Save();
+            }
         }
     }
 }

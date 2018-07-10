@@ -45,13 +45,15 @@
             // 
             // tBoxWhere
             // 
+            this.tBoxWhere.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tBoxWhere.Location = new System.Drawing.Point(12, 276);
             this.tBoxWhere.Name = "tBoxWhere";
-            this.tBoxWhere.Size = new System.Drawing.Size(243, 20);
+            this.tBoxWhere.Size = new System.Drawing.Size(243, 21);
             this.tBoxWhere.TabIndex = 1;
             // 
             // tBoxWhat
             // 
+            this.tBoxWhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tBoxWhat.Location = new System.Drawing.Point(272, 276);
             this.tBoxWhat.Multiline = true;
             this.tBoxWhat.Name = "tBoxWhat";
@@ -152,18 +154,22 @@
             // 
             // lBoxViewL
             // 
+            this.lBoxViewL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lBoxViewL.FormattingEnabled = true;
+            this.lBoxViewL.ItemHeight = 15;
             this.lBoxViewL.Location = new System.Drawing.Point(12, 12);
             this.lBoxViewL.Name = "lBoxViewL";
-            this.lBoxViewL.Size = new System.Drawing.Size(243, 212);
+            this.lBoxViewL.Size = new System.Drawing.Size(243, 199);
             this.lBoxViewL.TabIndex = 8;
             // 
             // lBoxViewR
             // 
+            this.lBoxViewR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lBoxViewR.FormattingEnabled = true;
+            this.lBoxViewR.ItemHeight = 15;
             this.lBoxViewR.Location = new System.Drawing.Point(254, 12);
             this.lBoxViewR.Name = "lBoxViewR";
-            this.lBoxViewR.Size = new System.Drawing.Size(243, 212);
+            this.lBoxViewR.Size = new System.Drawing.Size(243, 199);
             this.lBoxViewR.TabIndex = 8;
             // 
             // fSec_Measure
@@ -183,7 +189,7 @@
             this.Controls.Add(this.tBoxWhere);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fSec_Measure";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Меры по подготовке рабочих мест";
             this.Load += new System.EventHandler(this.fSec_Measure_Load);
             this.ResumeLayout(false);
