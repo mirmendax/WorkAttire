@@ -43,6 +43,14 @@ namespace attirelib
         /// </summary>
         public DateTime Date_Time_End = new DateTime();
         /// <summary>
+        /// Продлен ли наряд
+        /// </summary>
+        public bool isExtend = false;
+        /// <summary>
+        /// Дата окончания при продлении
+        /// </summary>
+        public DateTime Date_Time_End_Extend = new DateTime();
+        /// <summary>
         /// Меры безопасности
         /// </summary>
         public List<Sec_Measures> Sec_Meas = new List<Sec_Measures>();
@@ -59,7 +67,7 @@ namespace attirelib
         /// </summary>
         public Emp GiveAttire = new Emp();
         /// <summary>
-        /// Кол-во допусков
+        /// Не нужная переменная
         /// </summary>
         public int Count = 0;
         /// <summary>
@@ -98,6 +106,8 @@ namespace attirelib
             this.Estr = data.Estr;
             this.Date_Time_Begin = data.Date_Time_Begin;
             this.Date_Time_End = data.Date_Time_End;
+            this.isExtend = data.isExtend;
+            this.Date_Time_End_Extend = data.Date_Time_End_Extend;
             this.Sec_Meas = data.Sec_Meas;
             this.Spec_Insrtrucion = data.Spec_Insrtrucion;
             this.Date_Time_Give = data.Date_Time_Give;
@@ -121,6 +131,8 @@ namespace attirelib
             this.Estr = estr;
             this.Date_Time_Begin = dtBegin;
             this.Date_Time_End = dtEnd;
+            this.isExtend = false;
+            this.Date_Time_End_Extend = dtEnd;
             this.Sec_Meas.Clear();
             foreach (var item in sMeas)
             {

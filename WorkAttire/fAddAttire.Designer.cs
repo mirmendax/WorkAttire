@@ -72,9 +72,10 @@
             this.lBoxViewL = new System.Windows.Forms.ListBox();
             this.label15 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
-            this.addOrderbtn = new System.Windows.Forms.Button();
-            this.EditEmpButton = new System.Windows.Forms.Button();
+            this.bAddAttire = new System.Windows.Forms.Button();
+            this.bEditEmp = new System.Windows.Forms.Button();
             this.lAbout = new System.Windows.Forms.Label();
+            this.bArhive = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -578,36 +579,36 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
-            // addOrderbtn
+            // bAddAttire
             // 
-            this.addOrderbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addOrderbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addOrderbtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addOrderbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addOrderbtn.ImageIndex = 10;
-            this.addOrderbtn.ImageList = this.imageList1;
-            this.addOrderbtn.Location = new System.Drawing.Point(595, 366);
-            this.addOrderbtn.Name = "addOrderbtn";
-            this.addOrderbtn.Size = new System.Drawing.Size(284, 51);
-            this.addOrderbtn.TabIndex = 37;
-            this.addOrderbtn.Text = "Заполнить";
-            this.addOrderbtn.UseVisualStyleBackColor = true;
-            this.addOrderbtn.Click += new System.EventHandler(this.addOrderbtn_Click);
+            this.bAddAttire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAddAttire.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bAddAttire.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bAddAttire.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bAddAttire.ImageIndex = 10;
+            this.bAddAttire.ImageList = this.imageList1;
+            this.bAddAttire.Location = new System.Drawing.Point(595, 366);
+            this.bAddAttire.Name = "bAddAttire";
+            this.bAddAttire.Size = new System.Drawing.Size(284, 51);
+            this.bAddAttire.TabIndex = 37;
+            this.bAddAttire.Text = "Заполнить";
+            this.bAddAttire.UseVisualStyleBackColor = true;
+            this.bAddAttire.Click += new System.EventHandler(this.addOrderbtn_Click);
             // 
-            // EditEmpButton
+            // bEditEmp
             // 
-            this.EditEmpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditEmpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EditEmpButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EditEmpButton.ImageIndex = 0;
-            this.EditEmpButton.ImageList = this.imageList1;
-            this.EditEmpButton.Location = new System.Drawing.Point(595, 493);
-            this.EditEmpButton.Name = "EditEmpButton";
-            this.EditEmpButton.Size = new System.Drawing.Size(284, 37);
-            this.EditEmpButton.TabIndex = 40;
-            this.EditEmpButton.Text = "Список работников";
-            this.EditEmpButton.UseVisualStyleBackColor = true;
-            this.EditEmpButton.Click += new System.EventHandler(this.EditEmpButton_Click);
+            this.bEditEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bEditEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bEditEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bEditEmp.ImageIndex = 0;
+            this.bEditEmp.ImageList = this.imageList1;
+            this.bEditEmp.Location = new System.Drawing.Point(595, 493);
+            this.bEditEmp.Name = "bEditEmp";
+            this.bEditEmp.Size = new System.Drawing.Size(284, 37);
+            this.bEditEmp.TabIndex = 40;
+            this.bEditEmp.Text = "Список работников";
+            this.bEditEmp.UseVisualStyleBackColor = true;
+            this.bEditEmp.Click += new System.EventHandler(this.EditEmpButton_Click);
             // 
             // lAbout
             // 
@@ -621,14 +622,30 @@
             this.lAbout.TabIndex = 41;
             this.lAbout.Text = "Programming MIR ";
             // 
+            // bArhive
+            // 
+            this.bArhive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bArhive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bArhive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bArhive.ImageIndex = 8;
+            this.bArhive.ImageList = this.imageList1;
+            this.bArhive.Location = new System.Drawing.Point(595, 553);
+            this.bArhive.Name = "bArhive";
+            this.bArhive.Size = new System.Drawing.Size(284, 37);
+            this.bArhive.TabIndex = 42;
+            this.bArhive.Text = "Архив нарядов";
+            this.bArhive.UseVisualStyleBackColor = true;
+            this.bArhive.Click += new System.EventHandler(this.bArhive_Click);
+            // 
             // fAddAttire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 781);
+            this.Controls.Add(this.bArhive);
             this.Controls.Add(this.lAbout);
-            this.Controls.Add(this.EditEmpButton);
-            this.Controls.Add(this.addOrderbtn);
+            this.Controls.Add(this.bEditEmp);
+            this.Controls.Add(this.bAddAttire);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -703,11 +720,12 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button addOrderbtn;
+        private System.Windows.Forms.Button bAddAttire;
         private System.Windows.Forms.ListBox lBoxViewR;
         private System.Windows.Forms.ListBox lBoxViewL;
-        private System.Windows.Forms.Button EditEmpButton;
+        private System.Windows.Forms.Button bEditEmp;
         private System.Windows.Forms.Label lAbout;
+        private System.Windows.Forms.Button bArhive;
 
     }
 }

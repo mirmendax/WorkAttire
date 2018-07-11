@@ -12,12 +12,12 @@ namespace WorkAttire
 {
     public partial class fAddAttire : Form
     {
-        const string VER = "1.0a";
         #region Forms
         fEmployes fEmpl = new fEmployes();
         fDateTime fData = new fDateTime();
         fSec_Measure fSec = new fSec_Measure();
         fAddUser fUser = new fAddUser();
+        fArhive fListAttire = new fArhive();
         #endregion
         /*  Private Team   */
         private bool Remove_Emp_Team = false;
@@ -43,7 +43,7 @@ namespace WorkAttire
             Excel exc = new Excel();
             try
             {
-                exc.OpenDocument(Application.StartupPath + "\\" + Const.DOC_ATTIRE);
+                exc.OpenDocument(Application.StartupPath + "\\" + Const.FILE_TEMPLATE_ATTIRE);
                 exc.Visible = true;
                 ///ResponseManager
                 exc.SetValue("C7", a.ResponseManager.ToString());
@@ -211,7 +211,7 @@ namespace WorkAttire
         {
             ListAttire.Load();
             ListEmps.Load();
-            lAbout.Text = string.Format(Const.ABOUT_FORMAT, Const.Version());
+            lAbout.Text = string.Format(Const.FORMAT_ABOUT, Const.Version());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -412,6 +412,12 @@ namespace WorkAttire
                 }
                 ListEmps.Save();
             }
+        }
+
+        private void bArhive_Click(object sender, EventArgs e)
+        {
+            fListAttire.Data = ListAttire;
+            fListAttire.ShowDialog();
         }
     }
 }

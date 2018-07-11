@@ -41,13 +41,13 @@
             this.bListUnReg = new System.Windows.Forms.Button();
             this.bListAll = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.mCalA = new System.Windows.Forms.MonthCalendar();
-            this.mCalB = new System.Windows.Forms.MonthCalendar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lCountAttire = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.lCountAttire = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.mCalB = new System.Windows.Forms.MonthCalendar();
+            this.mCalA = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -182,62 +182,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "За срок:";
             // 
-            // mCalA
-            // 
-            this.mCalA.Location = new System.Drawing.Point(12, 14);
-            this.mCalA.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.mCalA.MaxSelectionCount = 1;
-            this.mCalA.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
-            this.mCalA.Name = "mCalA";
-            this.mCalA.ShowToday = false;
-            this.mCalA.TabIndex = 0;
-            // 
-            // mCalB
-            // 
-            this.mCalB.Location = new System.Drawing.Point(194, 14);
-            this.mCalB.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.mCalB.MaxSelectionCount = 1;
-            this.mCalB.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
-            this.mCalB.Name = "mCalB";
-            this.mCalB.ShowToday = false;
-            this.mCalB.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 179);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Дата";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(191, 179);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Дата";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(370, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Кол-во нарядов:";
-            // 
-            // lCountAttire
-            // 
-            this.lCountAttire.AutoSize = true;
-            this.lCountAttire.Location = new System.Drawing.Point(485, 35);
-            this.lCountAttire.Name = "lCountAttire";
-            this.lCountAttire.Size = new System.Drawing.Size(13, 13);
-            this.lCountAttire.TabIndex = 43;
-            this.lCountAttire.Text = "0";
-            // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -251,6 +195,62 @@
             this.button3.TabIndex = 43;
             this.button3.Text = "Посчитать";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // lCountAttire
+            // 
+            this.lCountAttire.AutoSize = true;
+            this.lCountAttire.Location = new System.Drawing.Point(485, 35);
+            this.lCountAttire.Name = "lCountAttire";
+            this.lCountAttire.Size = new System.Drawing.Size(13, 13);
+            this.lCountAttire.TabIndex = 43;
+            this.lCountAttire.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(370, 35);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Кол-во нарядов:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(191, 179);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Дата";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Дата";
+            // 
+            // mCalB
+            // 
+            this.mCalB.Location = new System.Drawing.Point(194, 14);
+            this.mCalB.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
+            this.mCalB.MaxSelectionCount = 1;
+            this.mCalB.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.mCalB.Name = "mCalB";
+            this.mCalB.ShowToday = false;
+            this.mCalB.TabIndex = 1;
+            // 
+            // mCalA
+            // 
+            this.mCalA.Location = new System.Drawing.Point(12, 14);
+            this.mCalA.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
+            this.mCalA.MaxSelectionCount = 1;
+            this.mCalA.MinDate = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
+            this.mCalA.Name = "mCalA";
+            this.mCalA.ShowToday = false;
+            this.mCalA.TabIndex = 0;
             // 
             // button1
             // 
@@ -286,6 +286,7 @@
             this.Name = "fArhive";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Наряды";
+            this.Load += new System.EventHandler(this.fArhive_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

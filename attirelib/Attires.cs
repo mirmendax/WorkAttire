@@ -34,7 +34,7 @@ namespace attirelib
             List<Attire> result = new List<Attire>();
             foreach (var item in ListAttire)
             {
-                if (!item.isClosed)
+                if (!item.isClosed && item.Number != 0)
                     result.Add(item);
             }
             return result;
@@ -54,24 +54,33 @@ namespace attirelib
             return result;
         }
         /// <summary>
-        /// Удаление наряда по ID или по объекту
+        /// Удаление наряда по ID
         /// </summary>
-        /// <param name="delAt">Объект наряда</param>
         /// <param name="id">Уникальный номер</param>
         /// <returns></returns>
-        public bool DeleteNotVerifyedAttire(Attire delAt, string id = "")
+        public bool DeleteNotVerifyedAttire(string id)
         {
             bool result = false;
-            if (id == "")
-            {
-                if (ListAttire.Remove(delAt)) result = true;
-                else result = false;
-            }
-            else
-            {
-                Attire temp = FindAttire(id);
+            Attire temp = FindAttire(id);
+            if (temp != null)
                 if (ListAttire.Remove(temp)) result = true;
                 else result = false;
+
+            return result;
+        }
+        /// <summary>
+        /// Регистрация наряда
+        /// </summary>
+        /// <param name="ID">Уникальный номер наряда</param>
+        /// <param name="number">Присвоенный номер наряда</param>
+        /// <returns></returns>
+        public bool VerifyedAtiire(string ID, int number)
+        {
+            bool result = false;
+            Attire temp = FindAttire(ID);
+            if (temp != null)
+            {
+
             }
             return result;
         }
@@ -82,7 +91,7 @@ namespace attirelib
         /// <returns></returns>
         public Attire FindAttire(string ID)
         {
-            Attire result = new Attire();
+            Attire result = null;
             foreach (var item in ListAttire)
             {
                 if (item.ID == ID)
@@ -101,7 +110,8 @@ namespace attirelib
         {
             bool result = false;
             Attire temp = FindAttire(ID);
-            if (temp.ID == ID) result = true;
+            if (temp != null)
+                if (temp.ID == ID) result = true;
             return result;
         }
         /// <summary>
@@ -116,15 +126,82 @@ namespace attirelib
             if (isAvaibleHash(data.ID)) result = true;
             return result;
         }
-
-        public int AddCountAttire(string ID)
+        /// <summary>
+        /// Проверка просроченности открытых нарядов и перевод их в закрытые
+        /// </summary>
+        /// <returns>False - Нет просроченных, True - Есть</returns>
+        public bool CheckOpenedAttire()
         {
-            int result = 0;
-            Attire temp = FindAttire(ID);
-            temp.Count++;
-            result = temp.Count;
+            bool result = false;
+            DateTime ToDAy = DateTime.Today;
+            List<Attire> openedList = ListOpenedAttire();
+            for (int i = 0; i < openedList.Count; i++)
+            {
+                if (openedList[i].isExtend)
+                {
+                    if (openedList[i].Date_Time_End_Extend > ToDAy)
+                    {
+                        openedList[i].isClosed = true;
+                        result = true;
+                    }
+                }
+                else
+                {
+                    if (openedList[i].Date_Time_End > ToDAy)
+                    {
+                        openedList[i].isClosed = true;
+                        result = true;
+                    }
+                }
+            }
             return result;
         }
+        /// <summary>
+        /// Продление наряда 
+        /// </summary>
+        /// <param name="ID">ID наряда</param>
+        /// <param name="DateOut">Продлить от даты</param>
+        /// <param name="Days">Кол-во дней</param>
+        /// <returns></returns>
+        public Attire ExtendAttire(string ID, DateTime DateOut, int Days)
+        {
+            Attire result = new Attire();
+            Attire temp = FindAttire(ID);
+            if (temp != null)
+            {
+                temp.isExtend = true;
+                if (Days > 15) Days = 15;
+                temp.Date_Time_End_Extend = DateOut.AddDays(Days);
+                result = temp;
+
+            }
+            else result = null;
+            return result;
+        }
+
+        /// <summary>
+        /// Вывод нарядов за определенный срок
+        /// </summary>
+        /// <param name="a">Дата начала</param>
+        /// <param name="b">Дата окончания</param>
+        /// <returns></returns>
+        public List<Attire> ShowOrder(DateTime a, DateTime b)
+        {
+            List<Attire> result = new List<Attire>();
+            List<DateTime> dd = new List<DateTime>();
+            DateTime dcount = a;
+            while (dcount <= b)
+            {
+                dd.Add(dcount);
+                dcount = dcount.AddDays(1);
+            }
+            IEnumerable<Attire> query = from o in ListAttire
+                                        join t in dd on o.Date_Time_Give equals t
+                                        select o;
+            result = query.ToList(); 
+            return result;
+        }
+
 
         public void Load()
         {

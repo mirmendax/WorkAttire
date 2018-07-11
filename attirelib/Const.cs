@@ -9,15 +9,19 @@ namespace attirelib
 {
     public class Const
     {
+        /* Files */
         public static string FILE_EMPS = "emps.wa";
         public static string FILE_ATTIRE = "arhive.wa";
         public static string FILE_LOG = "error.log";
         public static string FILE_VERSION = "version";
+        public static string FILE_TEMPLATE_ATTIRE = "attire.xltx";
+        /* Formats string */
         public static string FORMAT_DATA = "dd.MM.yy";
         public static string FORMAT_TIME = "HH.mm";
-        public static string DOC_ATTIRE = "attire.xltx";
+        public static string FORMAT_ABOUT = "WorkAttire {0} Programming [MIR] Mendax (c) 2006-2018// СТСУ уч. ТАиВ";
+        
+        /* Other  */
         public static int DAYS_ATTIRE = 14;
-        public static string ABOUT_FORMAT = "WorkAttire {0} Programming [MIR] Mendax (c) 2006-2018// СТСУ уч. ТАиВ";
         public static string BR_OUT_DIAPOSON = "В бригаде достаточно членов!";
         public enum RULE
         {
