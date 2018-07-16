@@ -418,6 +418,8 @@ namespace WorkAttire
         {
             fListAttire.Data = ListAttire;
             fListAttire.ShowDialog();
+            ListAttire = fListAttire.Data;
+            //ListAttire.Save();
         }
     }
 }

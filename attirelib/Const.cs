@@ -19,6 +19,7 @@ namespace attirelib
         public static string FORMAT_DATA = "dd.MM.yy";
         public static string FORMAT_TIME = "HH.mm";
         public static string FORMAT_ABOUT = "WorkAttire {0} Programming [MIR] Mendax (c) 2006-2018// СТСУ уч. ТАиВ";
+        public static int FORMAT_ESTR_LENGTH = 150;
         
         /* Other  */
         public static int DAYS_ATTIRE = 14;

@@ -62,6 +62,18 @@
     <Compile Include="fArhive.Designer.cs">
       <DependentUpon>fArhive.cs</DependentUpon>
     </Compile>
+    <Compile Include="fArhiveAcive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fArhiveAcive.Designer.cs">
+      <DependentUpon>fArhiveAcive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fArhiveUnReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fArhiveUnReg.Designer.cs">
+      <DependentUpon>fArhiveUnReg.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDateTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fArhive.resx">
       <DependentUpon>fArhive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fArhiveAcive.resx">
+      <DependentUpon>fArhiveAcive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fArhiveUnReg.resx">
+      <DependentUpon>fArhiveUnReg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDateTime.resx">
       <DependentUpon>fDateTime.cs</DependentUpon>

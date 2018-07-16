@@ -44,8 +44,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.lCountAttire = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lDate_B = new System.Windows.Forms.Label();
+            this.lDate_A = new System.Windows.Forms.Label();
             this.mCalB = new System.Windows.Forms.MonthCalendar();
             this.mCalA = new System.Windows.Forms.MonthCalendar();
             this.button1 = new System.Windows.Forms.Button();
@@ -119,6 +119,7 @@
             this.bListActive.TabIndex = 41;
             this.bListActive.Text = "Список   ";
             this.bListActive.UseVisualStyleBackColor = true;
+            this.bListActive.Click += new System.EventHandler(this.bListActive_Click);
             // 
             // imageList1
             // 
@@ -151,6 +152,7 @@
             this.bListUnReg.TabIndex = 41;
             this.bListUnReg.Text = "Список   ";
             this.bListUnReg.UseVisualStyleBackColor = true;
+            this.bListUnReg.Click += new System.EventHandler(this.bListUnReg_Click);
             // 
             // bListAll
             // 
@@ -171,8 +173,8 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.lCountAttire);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.lDate_B);
+            this.groupBox1.Controls.Add(this.lDate_A);
             this.groupBox1.Controls.Add(this.mCalB);
             this.groupBox1.Controls.Add(this.mCalA);
             this.groupBox1.Location = new System.Drawing.Point(12, 189);
@@ -195,6 +197,7 @@
             this.button3.TabIndex = 43;
             this.button3.Text = "Посчитать";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lCountAttire
             // 
@@ -203,7 +206,7 @@
             this.lCountAttire.Name = "lCountAttire";
             this.lCountAttire.Size = new System.Drawing.Size(13, 13);
             this.lCountAttire.TabIndex = 43;
-            this.lCountAttire.Text = "0";
+            this.lCountAttire.Text = "1";
             // 
             // label7
             // 
@@ -214,23 +217,23 @@
             this.label7.TabIndex = 4;
             this.label7.Text = "Кол-во нарядов:";
             // 
-            // label6
+            // lDate_B
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(191, 179);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Дата";
+            this.lDate_B.AutoSize = true;
+            this.lDate_B.Location = new System.Drawing.Point(191, 179);
+            this.lDate_B.Name = "lDate_B";
+            this.lDate_B.Size = new System.Drawing.Size(33, 13);
+            this.lDate_B.TabIndex = 3;
+            this.lDate_B.Text = "Дата";
             // 
-            // label5
+            // lDate_A
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 179);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Дата";
+            this.lDate_A.AutoSize = true;
+            this.lDate_A.Location = new System.Drawing.Point(9, 179);
+            this.lDate_A.Name = "lDate_A";
+            this.lDate_A.Size = new System.Drawing.Size(33, 13);
+            this.lDate_A.TabIndex = 2;
+            this.lDate_A.Text = "Дата";
             // 
             // mCalB
             // 
@@ -241,6 +244,7 @@
             this.mCalB.Name = "mCalB";
             this.mCalB.ShowToday = false;
             this.mCalB.TabIndex = 1;
+            this.mCalB.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mCalB_DateSelected);
             // 
             // mCalA
             // 
@@ -251,6 +255,7 @@
             this.mCalA.Name = "mCalA";
             this.mCalA.ShowToday = false;
             this.mCalA.TabIndex = 0;
+            this.mCalA.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mCalA_DateSelected);
             // 
             // button1
             // 
@@ -265,6 +270,7 @@
             this.button1.TabIndex = 43;
             this.button1.Text = "Закрыть";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fArhive
             // 
@@ -310,8 +316,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lCountAttire;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lDate_B;
+        private System.Windows.Forms.Label lDate_A;
         private System.Windows.Forms.MonthCalendar mCalB;
         private System.Windows.Forms.MonthCalendar mCalA;
         private System.Windows.Forms.Button button1;

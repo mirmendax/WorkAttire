@@ -13,3 +13,5 @@ E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fDateTime.resources
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fSec_Measure.resources
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fAddUser.resources
 E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fArhive.resources
+E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fArhiveUnReg.resources
+E:\Project\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fArhiveAcive.resources

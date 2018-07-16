@@ -185,7 +185,7 @@ namespace attirelib
         /// <param name="a">Дата начала</param>
         /// <param name="b">Дата окончания</param>
         /// <returns></returns>
-        public List<Attire> ShowOrder(DateTime a, DateTime b)
+        public List<Attire> ShowAttire(DateTime a, DateTime b)
         {
             List<Attire> result = new List<Attire>();
             List<DateTime> dd = new List<DateTime>();
@@ -196,7 +196,8 @@ namespace attirelib
                 dcount = dcount.AddDays(1);
             }
             IEnumerable<Attire> query = from o in ListAttire
-                                        join t in dd on o.Date_Time_Give equals t
+                                        join t in dd on o.Date_Time_Give.Date equals t
+                                        where o.Number != 0
                                         select o;
             result = query.ToList(); 
             return result;
