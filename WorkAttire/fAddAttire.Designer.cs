@@ -328,8 +328,6 @@
             this.tBoxEstr.Name = "tBoxEstr";
             this.tBoxEstr.Size = new System.Drawing.Size(552, 81);
             this.tBoxEstr.TabIndex = 1;
-            this.tBoxEstr.Text = "ЩВ-18Г, 2ТН-18Г, 3ТН-18Г, 2КТН-18Г, 18ПР-3, АЩУ-18Г: техническое обслуживание цеп" +
-    "ей вторичной коммутации систем возбуждения в объеме профилактического контроля.";
             this.tBoxEstr.TextChanged += new System.EventHandler(this.tBoxEstr_TextChanged);
             // 
             // label6
@@ -531,7 +529,6 @@
             this.tBoxInstr.Name = "tBoxInstr";
             this.tBoxInstr.Size = new System.Drawing.Size(855, 81);
             this.tBoxInstr.TabIndex = 1;
-            this.tBoxInstr.Text = resources.GetString("tBoxInstr.Text");
             // 
             // label14
             // 
@@ -603,14 +600,14 @@
             // bAddAttire
             // 
             this.bAddAttire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bAddAttire.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bAddAttire.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.bAddAttire.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bAddAttire.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bAddAttire.ImageIndex = 10;
             this.bAddAttire.ImageList = this.imageList1;
             this.bAddAttire.Location = new System.Drawing.Point(595, 366);
             this.bAddAttire.Name = "bAddAttire";
-            this.bAddAttire.Size = new System.Drawing.Size(284, 51);
+            this.bAddAttire.Size = new System.Drawing.Size(284, 62);
             this.bAddAttire.TabIndex = 37;
             this.bAddAttire.Text = "Заполнить";
             this.bAddAttire.UseVisualStyleBackColor = true;
@@ -623,7 +620,7 @@
             this.bEditEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bEditEmp.ImageIndex = 0;
             this.bEditEmp.ImageList = this.imageList1;
-            this.bEditEmp.Location = new System.Drawing.Point(592, 536);
+            this.bEditEmp.Location = new System.Drawing.Point(591, 553);
             this.bEditEmp.Name = "bEditEmp";
             this.bEditEmp.Size = new System.Drawing.Size(284, 37);
             this.bEditEmp.TabIndex = 40;
@@ -650,7 +647,7 @@
             this.bArhive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bArhive.ImageIndex = 8;
             this.bArhive.ImageList = this.imageList1;
-            this.bArhive.Location = new System.Drawing.Point(592, 596);
+            this.bArhive.Location = new System.Drawing.Point(590, 617);
             this.bArhive.Name = "bArhive";
             this.bArhive.Size = new System.Drawing.Size(284, 37);
             this.bArhive.TabIndex = 42;
@@ -665,12 +662,13 @@
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.ImageIndex = 8;
             this.button10.ImageList = this.imageList1;
-            this.button10.Location = new System.Drawing.Point(595, 438);
+            this.button10.Location = new System.Drawing.Point(590, 510);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(284, 37);
             this.button10.TabIndex = 40;
             this.button10.Text = "Работы по программе";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button13_Click);
             // 
             // fAddAttire
             // 
@@ -693,6 +691,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "fAddAttire";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Наряд-Допуск";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

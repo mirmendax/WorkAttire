@@ -30,6 +30,27 @@ namespace attirelib
         /// </summary>
         public static string FORMAT_ACTIVE_ATTIRE_LIST = "{0}№{1} >> {2} -> {3}: [{4}] {5} - {6}";//
         public static string FORMAT_ALL_ATTIRE_LIST = "{0}{1}№{2} от {3} - [{4}] > {5}: {6}";//
+        public static string FORMAT_PROGRAM_TO = "80/{0}-{1}";
+        public static string FORMAT_PROGRAM_RAB = "80/{0}-{1}(р)";
+
+        public static string FORMAT_TYPE_TO_K = "профилактического контроля";
+        public static string FORMAT_TYPE_TO_K1 = "первого профилактического контроля";
+        public static string FORMAT_TYPE_TO_B = "восстановления";
+
+        public static string FORMAT_MEASURE_PROGRAM = "Не требуется";
+
+        public static string FORMAT_TYPE_TO_K_ = "К";
+        public static string FORMAT_TYPE_TO_K1_ = "К1";
+        public static string FORMAT_TYPE_TO_B_ = "В";
+        /// <summary>
+        /// 0 - Рабочие места 1 - Тип ТО
+        /// </summary>
+        public static string FORMAT_ESTR_PROGRAMM = "{0}: техническое обслуживание цепей вторичной коммутации систем возбуждения в объеме {1}.";
+        public static string FORMAT_WORKPLACE_LIST = "{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}";
+        /// <summary>
+        /// 0 - Номер программы ТО 1 - Дата программы ТО 2 - Номер рабочей программы 3 - Дата раб. программы
+        /// </summary>
+        public static string FORMAT_INST_PROGRAMM = "Работы выполнять в соответствии с программой {0} от {1}, рабочей программой {2} от {3}. Работы под напряжением на токоведущих частях выполнять по \"Технологической карте для работ под напряжением на токоведущих частях оборудования систем возбуждения генераторов ст. №1-23Г Волжской ГЭС\" под непрерывным управлением ответственного руководителя работ.";
         public static int FORMAT_ESTR_LENGTH = 130;
         
         /* Other  */
@@ -60,6 +81,7 @@ namespace attirelib
             GiveAttire = 40
             
         }
+
         public static string getId(string s = "")
         {
             Random r = new Random();

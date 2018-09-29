@@ -30,17 +30,27 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.addchrbtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.btn_Ok = new System.Windows.Forms.Button();
+            this.btn_Cancel = new System.Windows.Forms.Button();
+            this.n_AGR = new System.Windows.Forms.NumericUpDown();
+            this.cB_SV = new System.Windows.Forms.CheckBox();
+            this.cB_1TN = new System.Windows.Forms.CheckBox();
+            this.cB_2TN = new System.Windows.Forms.CheckBox();
+            this.cB_3TN = new System.Windows.Forms.CheckBox();
+            this.cB_1KTN = new System.Windows.Forms.CheckBox();
+            this.cB_2KTN = new System.Windows.Forms.CheckBox();
+            this.cB_PR3 = new System.Windows.Forms.CheckBox();
+            this.cB_ASU = new System.Windows.Forms.CheckBox();
+            this.cB_SUG = new System.Windows.Forms.CheckBox();
+            this.cB_MPRZ = new System.Windows.Forms.CheckBox();
+            this.cB_23PR = new System.Windows.Forms.CheckBox();
+            this.d_TO = new System.Windows.Forms.DateTimePicker();
+            this.cBox_Type_TO = new System.Windows.Forms.ComboBox();
+            this.d_WorkProgram = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.n_AGR)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -61,22 +71,10 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Тип ТО";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "К",
-            "К1",
-            "В"});
-            this.comboBox1.Location = new System.Drawing.Point(157, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 3;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(283, 9);
+            this.label3.Location = new System.Drawing.Point(307, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 4;
@@ -91,13 +89,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Дата программы ТО";
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(157, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -107,77 +98,218 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Дата рабочей программы";
             // 
-            // textBox3
+            // btn_Ok
             // 
-            this.textBox3.Location = new System.Drawing.Point(157, 58);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 1;
+            this.btn_Ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_Ok.ImageIndex = 5;
+            this.btn_Ok.Location = new System.Drawing.Point(42, 151);
+            this.btn_Ok.Name = "btn_Ok";
+            this.btn_Ok.Size = new System.Drawing.Size(118, 32);
+            this.btn_Ok.TabIndex = 15;
+            this.btn_Ok.Text = "ОК";
+            this.btn_Ok.UseVisualStyleBackColor = true;
+            this.btn_Ok.Click += new System.EventHandler(this.btn_Ok_Click);
             // 
-            // checkedListBox1
+            // btn_Cancel
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "ЩВ-*Г",
-            "1ТН-*Г",
-            "2ТН-*Г",
-            "3ТН-*Г",
-            "2КТН-*Г",
-            "3КТН-*г",
-            "*ПР-3",
-            "23ПР-ЩВ",
-            "АЩУ-*Г",
-            "СУГ-23Г",
-            "МПРЗ СВ-23Г"});
-            this.checkedListBox1.Location = new System.Drawing.Point(372, 14);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 169);
-            this.checkedListBox1.TabIndex = 5;
+            this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btn_Cancel.ImageIndex = 5;
+            this.btn_Cancel.Location = new System.Drawing.Point(223, 151);
+            this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.Size = new System.Drawing.Size(118, 32);
+            this.btn_Cancel.TabIndex = 15;
+            this.btn_Cancel.Text = "Отмена";
+            this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.button1_Click);
             // 
-            // addchrbtn
+            // n_AGR
             // 
-            this.addchrbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addchrbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addchrbtn.ImageIndex = 5;
-            this.addchrbtn.Location = new System.Drawing.Point(12, 151);
-            this.addchrbtn.Name = "addchrbtn";
-            this.addchrbtn.Size = new System.Drawing.Size(118, 32);
-            this.addchrbtn.TabIndex = 15;
-            this.addchrbtn.Text = "ОК";
-            this.addchrbtn.UseVisualStyleBackColor = true;
+            this.n_AGR.Location = new System.Drawing.Point(154, 7);
+            this.n_AGR.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            0});
+            this.n_AGR.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.n_AGR.Name = "n_AGR";
+            this.n_AGR.Size = new System.Drawing.Size(100, 20);
+            this.n_AGR.TabIndex = 16;
+            this.n_AGR.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // button1
+            // cB_SV
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ImageIndex = 5;
-            this.button1.Location = new System.Drawing.Point(236, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 32);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Отмена";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cB_SV.AutoSize = true;
+            this.cB_SV.Location = new System.Drawing.Point(310, 25);
+            this.cB_SV.Name = "cB_SV";
+            this.cB_SV.Size = new System.Drawing.Size(56, 17);
+            this.cB_SV.TabIndex = 17;
+            this.cB_SV.Text = "ЩВ-*Г";
+            this.cB_SV.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // cB_1TN
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(157, 6);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(100, 20);
-            this.numericUpDown1.TabIndex = 16;
+            this.cB_1TN.AutoSize = true;
+            this.cB_1TN.Location = new System.Drawing.Point(310, 48);
+            this.cB_1TN.Name = "cB_1TN";
+            this.cB_1TN.Size = new System.Drawing.Size(60, 17);
+            this.cB_1TN.TabIndex = 17;
+            this.cB_1TN.Text = "1ТН-*Г";
+            this.cB_1TN.UseVisualStyleBackColor = true;
+            // 
+            // cB_2TN
+            // 
+            this.cB_2TN.AutoSize = true;
+            this.cB_2TN.Location = new System.Drawing.Point(310, 71);
+            this.cB_2TN.Name = "cB_2TN";
+            this.cB_2TN.Size = new System.Drawing.Size(60, 17);
+            this.cB_2TN.TabIndex = 17;
+            this.cB_2TN.Text = "2ТН-*Г";
+            this.cB_2TN.UseVisualStyleBackColor = true;
+            // 
+            // cB_3TN
+            // 
+            this.cB_3TN.AutoSize = true;
+            this.cB_3TN.Location = new System.Drawing.Point(310, 94);
+            this.cB_3TN.Name = "cB_3TN";
+            this.cB_3TN.Size = new System.Drawing.Size(60, 17);
+            this.cB_3TN.TabIndex = 17;
+            this.cB_3TN.Text = "3ТН-*Г";
+            this.cB_3TN.UseVisualStyleBackColor = true;
+            // 
+            // cB_1KTN
+            // 
+            this.cB_1KTN.AutoSize = true;
+            this.cB_1KTN.Location = new System.Drawing.Point(310, 117);
+            this.cB_1KTN.Name = "cB_1KTN";
+            this.cB_1KTN.Size = new System.Drawing.Size(67, 17);
+            this.cB_1KTN.TabIndex = 17;
+            this.cB_1KTN.Text = "1КТН-*Г";
+            this.cB_1KTN.UseVisualStyleBackColor = true;
+            // 
+            // cB_2KTN
+            // 
+            this.cB_2KTN.AutoSize = true;
+            this.cB_2KTN.Location = new System.Drawing.Point(415, 25);
+            this.cB_2KTN.Name = "cB_2KTN";
+            this.cB_2KTN.Size = new System.Drawing.Size(67, 17);
+            this.cB_2KTN.TabIndex = 17;
+            this.cB_2KTN.Text = "2КТН-*Г";
+            this.cB_2KTN.UseVisualStyleBackColor = true;
+            // 
+            // cB_PR3
+            // 
+            this.cB_PR3.AutoSize = true;
+            this.cB_PR3.Location = new System.Drawing.Point(415, 48);
+            this.cB_PR3.Name = "cB_PR3";
+            this.cB_PR3.Size = new System.Drawing.Size(54, 17);
+            this.cB_PR3.TabIndex = 17;
+            this.cB_PR3.Text = "*ПР-3";
+            this.cB_PR3.UseVisualStyleBackColor = true;
+            // 
+            // cB_ASU
+            // 
+            this.cB_ASU.AutoSize = true;
+            this.cB_ASU.Location = new System.Drawing.Point(415, 71);
+            this.cB_ASU.Name = "cB_ASU";
+            this.cB_ASU.Size = new System.Drawing.Size(64, 17);
+            this.cB_ASU.TabIndex = 17;
+            this.cB_ASU.Text = "АЩУ-*Г";
+            this.cB_ASU.UseVisualStyleBackColor = true;
+            // 
+            // cB_SUG
+            // 
+            this.cB_SUG.AutoSize = true;
+            this.cB_SUG.Location = new System.Drawing.Point(415, 94);
+            this.cB_SUG.Name = "cB_SUG";
+            this.cB_SUG.Size = new System.Drawing.Size(68, 17);
+            this.cB_SUG.TabIndex = 17;
+            this.cB_SUG.Text = "СУГ-23Г";
+            this.cB_SUG.UseVisualStyleBackColor = true;
+            // 
+            // cB_MPRZ
+            // 
+            this.cB_MPRZ.AutoSize = true;
+            this.cB_MPRZ.Location = new System.Drawing.Point(415, 117);
+            this.cB_MPRZ.Name = "cB_MPRZ";
+            this.cB_MPRZ.Size = new System.Drawing.Size(95, 17);
+            this.cB_MPRZ.TabIndex = 17;
+            this.cB_MPRZ.Text = "МПРЗ СВ-23Г";
+            this.cB_MPRZ.UseVisualStyleBackColor = true;
+            // 
+            // cB_23PR
+            // 
+            this.cB_23PR.AutoSize = true;
+            this.cB_23PR.Location = new System.Drawing.Point(415, 140);
+            this.cB_23PR.Name = "cB_23PR";
+            this.cB_23PR.Size = new System.Drawing.Size(73, 17);
+            this.cB_23PR.TabIndex = 17;
+            this.cB_23PR.Text = "23ПР-ЩВ";
+            this.cB_23PR.UseVisualStyleBackColor = true;
+            // 
+            // d_TO
+            // 
+            this.d_TO.Location = new System.Drawing.Point(154, 29);
+            this.d_TO.Name = "d_TO";
+            this.d_TO.Size = new System.Drawing.Size(132, 20);
+            this.d_TO.TabIndex = 18;
+            // 
+            // cBox_Type_TO
+            // 
+            this.cBox_Type_TO.AutoCompleteCustomSource.AddRange(new string[] {
+            "К",
+            "К1",
+            "В"});
+            this.cBox_Type_TO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cBox_Type_TO.FormattingEnabled = true;
+            this.cBox_Type_TO.Items.AddRange(new object[] {
+            "К",
+            "К1",
+            "В"});
+            this.cBox_Type_TO.Location = new System.Drawing.Point(154, 84);
+            this.cBox_Type_TO.Name = "cBox_Type_TO";
+            this.cBox_Type_TO.Size = new System.Drawing.Size(100, 21);
+            this.cBox_Type_TO.TabIndex = 3;
+            // 
+            // d_WorkProgram
+            // 
+            this.d_WorkProgram.Location = new System.Drawing.Point(154, 55);
+            this.d_WorkProgram.Name = "d_WorkProgram";
+            this.d_WorkProgram.Size = new System.Drawing.Size(132, 20);
+            this.d_WorkProgram.TabIndex = 18;
             // 
             // fProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 195);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.addchrbtn);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(526, 199);
+            this.Controls.Add(this.d_WorkProgram);
+            this.Controls.Add(this.d_TO);
+            this.Controls.Add(this.cB_23PR);
+            this.Controls.Add(this.cB_MPRZ);
+            this.Controls.Add(this.cB_SUG);
+            this.Controls.Add(this.cB_ASU);
+            this.Controls.Add(this.cB_PR3);
+            this.Controls.Add(this.cB_2KTN);
+            this.Controls.Add(this.cB_1KTN);
+            this.Controls.Add(this.cB_3TN);
+            this.Controls.Add(this.cB_2TN);
+            this.Controls.Add(this.cB_1TN);
+            this.Controls.Add(this.cB_SV);
+            this.Controls.Add(this.n_AGR);
+            this.Controls.Add(this.btn_Cancel);
+            this.Controls.Add(this.btn_Ok);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.cBox_Type_TO);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -186,7 +318,8 @@
             this.Name = "fProgram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Работа по программе";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.fProgram_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.n_AGR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,15 +329,25 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.Button addchrbtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button btn_Ok;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.NumericUpDown n_AGR;
+        private System.Windows.Forms.CheckBox cB_SV;
+        private System.Windows.Forms.CheckBox cB_1TN;
+        private System.Windows.Forms.CheckBox cB_2TN;
+        private System.Windows.Forms.CheckBox cB_3TN;
+        private System.Windows.Forms.CheckBox cB_1KTN;
+        private System.Windows.Forms.CheckBox cB_2KTN;
+        private System.Windows.Forms.CheckBox cB_PR3;
+        private System.Windows.Forms.CheckBox cB_ASU;
+        private System.Windows.Forms.CheckBox cB_SUG;
+        private System.Windows.Forms.CheckBox cB_MPRZ;
+        private System.Windows.Forms.CheckBox cB_23PR;
+        private System.Windows.Forms.DateTimePicker d_TO;
+        private System.Windows.Forms.DateTimePicker d_WorkProgram;
+        private System.Windows.Forms.ComboBox cBox_Type_TO;
     }
 }

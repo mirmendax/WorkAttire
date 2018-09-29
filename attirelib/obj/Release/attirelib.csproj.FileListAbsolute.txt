@@ -1,0 +1,4 @@
+D:\GitHub\WorkAttire\attirelib\bin\Release\attirelib.dll
+D:\GitHub\WorkAttire\attirelib\bin\Release\attirelib.pdb
+D:\GitHub\WorkAttire\attirelib\obj\Release\attirelib.dll
+D:\GitHub\WorkAttire\attirelib\obj\Release\attirelib.pdb

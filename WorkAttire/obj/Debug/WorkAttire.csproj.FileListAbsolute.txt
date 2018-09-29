@@ -34,3 +34,4 @@ D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.Properties.Resources.resour
 D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.csproj.GenerateResource.Cache
 D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fExtended_Data.resources
 D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fArhiveAll.resources
+D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fProgram.resources

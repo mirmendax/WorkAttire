@@ -80,7 +80,7 @@ namespace WorkAttire
                         string[] strArray3;
                         int index2;
                         (strArray3 = strArray2)[(int)(index2 = (int)index1)] = strArray3[index2] + str + " ";
-                        if ((strArray2[0].Length > 80) && (index1 == 0)) ++index1;
+                        if ((strArray2[0].Length > 70) && (index1 == 0)) ++index1;
                         if ((strArray2[index1].Length > 90) && (index1 != 0))
                             ++index1;
                     }
@@ -106,7 +106,7 @@ namespace WorkAttire
                         string[] strArray3;
                         int index2;
                         (strArray3 = strArray2)[(int)(index2 = (int)index1)] = strArray3[index2] + str + " ";
-                        if ((strArray2[0].Length > 75) && (index1 == 0)) ++index1;
+                        if ((strArray2[0].Length > 70) && (index1 == 0)) ++index1;
                         if ((strArray2[index1].Length >= 91) && (index1 != 0))
                             ++index1;
                     }
@@ -183,7 +183,7 @@ namespace WorkAttire
                 }
                 ///Measure
                 ///
-                
+                //MessageBox.Show(meas_l.Count.ToString());
                 for (int i = 0; i < meas_l.Count; i++)
                 {
                     exc.SetValue(L_Mes[i], meas_l[i]);
@@ -497,6 +497,27 @@ namespace WorkAttire
                     ls.Add(item);
             }
             
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            fProgram fp = new fProgram();
+            fp.ShowDialog();
+            if (fp.isOK)
+            {
+                CurrentAttire.Estr = fp.OUT_Estr;
+                CurrentAttire.Spec_Insrtrucion = fp.OUT_Instr;
+                Sec_Measures S_M = new Sec_Measures();
+                S_M.What.Add(Const.FORMAT_MEASURE_PROGRAM);
+                S_M.Where = Const.FORMAT_MEASURE_PROGRAM;
+                meas_l.Clear();
+                meas_r.Clear();
+                meas_l.Add(Const.FORMAT_MEASURE_PROGRAM);
+                meas_r.Add(Const.FORMAT_MEASURE_PROGRAM);
+                CurrentAttire.Sec_Meas.Clear();
+                CurrentAttire.Sec_Meas.Add(S_M);
+                onRewrite();
+            }
         }
 
     }
