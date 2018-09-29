@@ -1,3 +1,2 @@
-*.pdb
-*.dll
-*.exe
+attirelib\bin\*
+WorkAttire\bin\*
