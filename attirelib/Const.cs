@@ -18,9 +18,18 @@ namespace attirelib
         /* Formats string */
         public static string FORMAT_DATA = "dd.MM.yy";
         public static string FORMAT_TIME = "HH.mm";
+        /// <summary>
+        /// 0 - Версия
+        /// </summary>
         public static string FORMAT_ABOUT = "WorkAttire {0} Programming [MIR] Mendax (c) 2006-2018// СТСУ уч. ТАиВ";
         public static string FORMAT_EXTENDED_CHAR = "@ ";
-        public static string FORMAT_ACTIVE_ATTIRE_LIST = "{0}{1} >> {2} -> {3}: [{4}] {5} - {6}...";
+        public static string FORMAT_CLOSED_CHAR = "{X} ";
+        public static string FORMAT_NOT_REG_CHAR = "*";
+        /// <summary>
+        /// 0 - Продлен ли 1 - Номер 2 - Дата начала 3 - Дата окончания 4 - Кто выдал 5 - Ответственный 
+        /// </summary>
+        public static string FORMAT_ACTIVE_ATTIRE_LIST = "{0}№{1} >> {2} -> {3}: [{4}] {5} - {6}";//
+        public static string FORMAT_ALL_ATTIRE_LIST = "{0}{1}№{2} от {3} - [{4}] > {5}: {6}";//
         public static int FORMAT_ESTR_LENGTH = 130;
         
         /* Other  */

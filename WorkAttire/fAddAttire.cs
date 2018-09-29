@@ -29,6 +29,9 @@ namespace WorkAttire
         public Emps ListEmps = new Emps();
 
         public Attire CurrentAttire = new Attire();
+
+        private AutoCompleteStringCollection _ACS_estr = new AutoCompleteStringCollection();
+        private AutoCompleteStringCollection _ACS_instr = new AutoCompleteStringCollection();
         /*            */
         /// <summary>
         /// Write excel table
@@ -46,14 +49,18 @@ namespace WorkAttire
                 exc.OpenDocument(Application.StartupPath + "\\" + Const.FILE_TEMPLATE_ATTIRE);
                 exc.Visible = true;
                 ///ResponseManager
-                exc.SetValue("C7", a.ResponseManager.ToString());
-                exc.SetValue("Y48", a.ResponseManager.ToString());
-                exc.SetValue("T65", a.ResponseManager.ToString());
+                exc.SetValue("C7", a.ResponseManager.ToString()); // Поручается
+                exc.SetValue("Y48", a.ResponseManager.ToString());// от Выдающего
+                exc.SetValue("T65", a.ResponseManager.ToString()); // от допускающего
                 exc.SetValue("F97", a.ResponseManager.ToString());
                 //ForePerson
-                exc.SetValue("H9", a.ForePerson.ToString());
-                exc.SetValue("T67", a.ForePerson.ToString());
-                exc.SetValue("T97", a.ForePerson.ToString());
+                exc.SetValue("H9", a.ForePerson.ToString());// поручается
+                if (a.ForePerson != a.ResponseManager)
+                {
+                    exc.SetValue("T67", a.ForePerson.ToString());
+                    exc.SetValue("T97", a.ForePerson.ToString());
+                }
+                
                 exc.SetValue("F101", a.ForePerson.ToString());
                 ///GiveAttire
                 exc.SetValue("Y41", a.GiveAttire.ToString());
@@ -125,23 +132,54 @@ namespace WorkAttire
                     else team_str += a.Team[i].ToString() + ", ";
                 }
                 exc.SetValue("G11", team_str);
-                ///Team 1
-                exc.SetValue("T69", a.Team[0].ToString());
-                exc.SetValue("T99", a.Team[0].ToString());
-                exc.SetValue("T101", a.Team[0].ToString());
-                ///Team 2
-                if (a.Team.Count > 1 && a.Team[1] != null)
+                if (a.ResponseManager != new Emp())
                 {
-                    exc.SetValue("T71", a.Team[1].ToString());
-                    exc.SetValue("AC97", a.Team[1].ToString());
-                    exc.SetValue("T103", a.Team[1].ToString());
-                }
-                ///Team 3
-                if (a.Team.Count > 2 && a.Team[2] != null)
-                {
-                    exc.SetValue("AC65", a.Team[2].ToString());
-                    exc.SetValue("AC99", a.Team[2].ToString());
-                    exc.SetValue("AC101", a.Team[2].ToString());
+                    ///Team 1
+                    if (a.ResponseManager == a.ForePerson)/////////////////////
+                    {
+                        exc.SetValue("T67", a.Team[0].ToString());
+                        exc.SetValue("T97", a.Team[0].ToString());
+                    }
+                    else
+                    {
+                        exc.SetValue("T69", a.Team[0].ToString());
+                        exc.SetValue("T99", a.Team[0].ToString());
+                    }
+
+                    exc.SetValue("T101", a.Team[0].ToString());
+                    ///Team 2
+                    if (a.Team.Count > 1 && a.Team[1] != null)
+                    {
+                        if (a.ResponseManager == a.ForePerson)/////////////////////////
+                        {
+                            exc.SetValue("T69", a.Team[1].ToString());
+                            exc.SetValue("T99", a.Team[1].ToString());
+                        }
+                        else
+                        {
+                            exc.SetValue("T71", a.Team[1].ToString());
+                            exc.SetValue("AC97", a.Team[1].ToString());
+                        }
+
+
+                        exc.SetValue("T103", a.Team[1].ToString());
+                    }
+                    ///Team 3
+                    if (a.Team.Count > 2 && a.Team[2] != null)
+                    {
+                        if (a.ResponseManager == a.ForePerson)
+                        {
+                            exc.SetValue("T71", a.Team[2].ToString());
+                            exc.SetValue("AC97", a.Team[2].ToString());
+                        }
+                        else
+                        {
+                            exc.SetValue("AC65", a.Team[2].ToString());
+                            exc.SetValue("AC99", a.Team[2].ToString());
+                        }
+                        exc.SetValue("AC101", a.Team[2].ToString());
+                    }
+
                 }
                 ///Measure
                 ///
@@ -168,6 +206,23 @@ namespace WorkAttire
             
 
             return result;
+        }
+
+        private void LoadACS()
+        {
+            _ACS_estr.Clear();
+            _ACS_instr.Clear();
+            foreach (var item in ListAttire.ListAttire)
+            {
+                _ACS_estr.Add(item.Estr);
+                _ACS_instr.Add(item.Spec_Insrtrucion);
+                
+            }
+            if (_ACS_estr.Count > 0)
+                tBoxEstr.AutoCompleteCustomSource = _ACS_estr;
+            
+            if (_ACS_instr.Count > 0)
+                tBoxInstr.AutoCompleteCustomSource = _ACS_instr;
         }
 
         private Point LocForm(object sender)
@@ -205,12 +260,15 @@ namespace WorkAttire
             {
                 lBoxViewR.Items.Add(item);
             }
+            tBoxEstr.Text = CurrentAttire.Estr;
+            tBoxInstr.Text = CurrentAttire.Spec_Insrtrucion;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             ListAttire.Load();
             ListEmps.Load();
+            LoadACS();
             lAbout.Text = string.Format(Const.FORMAT_ABOUT, Const.Version());
         }
 
@@ -249,7 +307,7 @@ namespace WorkAttire
             fEmpl.ShowDialog();
             if (fEmpl.SelEmp != null)
             {
-                if (CurrentAttire.Team.Count <= 3)
+                if (CurrentAttire.Team.Count <= 2)
                     CurrentAttire.Team.Add(fEmpl.SelEmp);
                 
             }
@@ -420,6 +478,25 @@ namespace WorkAttire
             fListAttire.ShowDialog();
             ListAttire = fListAttire.Data;
             //ListAttire.Save();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            CurrentAttire.ResponseManager = null;
+        }
+
+        private void tBoxEstr_TextChanged(object sender, EventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            List<string> ls = new List<string>();
+            
+            ls.Clear();
+            foreach (string item in _ACS_estr)
+            {
+                if (item.ToString().StartsWith(t.Text))
+                    ls.Add(item);
+            }
+            
         }
 
     }

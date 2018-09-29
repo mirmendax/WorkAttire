@@ -36,6 +36,7 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -141,11 +142,12 @@
             // 
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.button12);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.lRespManager);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(299, 115);
+            this.groupBox1.Size = new System.Drawing.Size(299, 122);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -160,6 +162,19 @@
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button12
+            // 
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ImageKey = "20.png";
+            this.button12.Location = new System.Drawing.Point(5, 94);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(92, 22);
+            this.button12.TabIndex = 2;
+            this.button12.Text = "Не назначать";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Visible = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // groupBox2
             // 
@@ -299,13 +314,15 @@
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Location = new System.Drawing.Point(12, 240);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(568, 127);
+            this.groupBox4.Size = new System.Drawing.Size(568, 157);
             this.groupBox4.TabIndex = 32;
             this.groupBox4.TabStop = false;
             // 
             // tBoxEstr
             // 
-            this.tBoxEstr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBoxEstr.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tBoxEstr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBoxEstr.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tBoxEstr.Location = new System.Drawing.Point(9, 37);
             this.tBoxEstr.Multiline = true;
             this.tBoxEstr.Name = "tBoxEstr";
@@ -313,6 +330,7 @@
             this.tBoxEstr.TabIndex = 1;
             this.tBoxEstr.Text = "ЩВ-18Г, 2ТН-18Г, 3ТН-18Г, 2КТН-18Г, 18ПР-3, АЩУ-18Г: техническое обслуживание цеп" +
     "ей вторичной коммутации систем возбуждения в объеме профилактического контроля.";
+            this.tBoxEstr.TextChanged += new System.EventHandler(this.tBoxEstr_TextChanged);
             // 
             // label6
             // 
@@ -497,16 +515,18 @@
             // 
             this.groupBox7.Controls.Add(this.tBoxInstr);
             this.groupBox7.Controls.Add(this.label14);
-            this.groupBox7.Location = new System.Drawing.Point(12, 637);
+            this.groupBox7.Location = new System.Drawing.Point(12, 662);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(875, 127);
+            this.groupBox7.Size = new System.Drawing.Size(875, 143);
             this.groupBox7.TabIndex = 33;
             this.groupBox7.TabStop = false;
             // 
             // tBoxInstr
             // 
-            this.tBoxInstr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tBoxInstr.Location = new System.Drawing.Point(9, 37);
+            this.tBoxInstr.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.tBoxInstr.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.tBoxInstr.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tBoxInstr.Location = new System.Drawing.Point(8, 27);
             this.tBoxInstr.Multiline = true;
             this.tBoxInstr.Name = "tBoxInstr";
             this.tBoxInstr.Size = new System.Drawing.Size(855, 81);
@@ -517,7 +537,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(8, 13);
+            this.label14.Location = new System.Drawing.Point(8, 8);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(152, 17);
             this.label14.TabIndex = 0;
@@ -529,7 +549,7 @@
             this.groupBox8.Controls.Add(this.lBoxViewL);
             this.groupBox8.Controls.Add(this.label15);
             this.groupBox8.Controls.Add(this.button11);
-            this.groupBox8.Location = new System.Drawing.Point(12, 368);
+            this.groupBox8.Location = new System.Drawing.Point(12, 395);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(568, 272);
             this.groupBox8.TabIndex = 36;
@@ -537,7 +557,7 @@
             // 
             // lBoxViewR
             // 
-            this.lBoxViewR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lBoxViewR.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lBoxViewR.FormattingEnabled = true;
             this.lBoxViewR.ItemHeight = 15;
             this.lBoxViewR.Location = new System.Drawing.Point(274, 60);
@@ -547,7 +567,7 @@
             // 
             // lBoxViewL
             // 
-            this.lBoxViewL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lBoxViewL.Font = new System.Drawing.Font("Times New Roman", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lBoxViewL.FormattingEnabled = true;
             this.lBoxViewL.ItemHeight = 15;
             this.lBoxViewL.Location = new System.Drawing.Point(32, 60);
@@ -617,7 +637,7 @@
             this.lAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lAbout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lAbout.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lAbout.Location = new System.Drawing.Point(14, 765);
+            this.lAbout.Location = new System.Drawing.Point(9, 808);
             this.lAbout.Name = "lAbout";
             this.lAbout.Size = new System.Drawing.Size(110, 13);
             this.lAbout.TabIndex = 41;
@@ -656,7 +676,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 781);
+            this.ClientSize = new System.Drawing.Size(894, 830);
             this.Controls.Add(this.bArhive);
             this.Controls.Add(this.lAbout);
             this.Controls.Add(this.button10);
@@ -745,6 +765,7 @@
         private System.Windows.Forms.Label lAbout;
         private System.Windows.Forms.Button bArhive;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button12;
 
     }
 }

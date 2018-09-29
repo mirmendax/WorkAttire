@@ -167,6 +167,7 @@
             this.bListAll.TabIndex = 41;
             this.bListAll.Text = "Список   ";
             this.bListAll.UseVisualStyleBackColor = true;
+            this.bListAll.Click += new System.EventHandler(this.bListAll_Click);
             // 
             // groupBox1
             // 

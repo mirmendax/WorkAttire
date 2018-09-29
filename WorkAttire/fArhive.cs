@@ -95,5 +95,12 @@ namespace WorkAttire
                 }
             }
         }
+
+        private void bListAll_Click(object sender, EventArgs e)
+        {
+            fArhiveAll fAll = new fArhiveAll();
+            fAll.ListAttire = Data.ListAttire;
+            fAll.ShowDialog();
+        }
     }
 }

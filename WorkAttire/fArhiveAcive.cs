@@ -33,7 +33,8 @@ namespace WorkAttire
                 if (item.Estr.Length < Const.FORMAT_ESTR_LENGTH)
                     estr = item.Estr;
                 else
-                    estr = item.Estr.Substring(0, Const.FORMAT_ESTR_LENGTH);
+                    estr = item.Estr.Substring(0, Const.FORMAT_ESTR_LENGTH) + "...";
+
                 listBox1.Items.Add(string.Format(Const.FORMAT_ACTIVE_ATTIRE_LIST,
                     (item.isExtend) ? Const.FORMAT_EXTENDED_CHAR : "",
                     item.Number.ToString(),

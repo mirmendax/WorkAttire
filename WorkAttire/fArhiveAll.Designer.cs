@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fArhiveAcive));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fArhiveAll));
             this.button2 = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.button3 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -44,7 +43,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.ImageIndex = 16;
             this.button2.ImageList = this.imageList1;
-            this.button2.Location = new System.Drawing.Point(1041, 170);
+            this.button2.Location = new System.Drawing.Point(1041, 472);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 40);
             this.button2.TabIndex = 49;
@@ -165,58 +164,42 @@
             this.imageList1.Images.SetKeyName(106, "107.png");
             this.imageList1.Images.SetKeyName(107, "108.png");
             // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageIndex = 29;
-            this.button3.ImageList = this.imageList1;
-            this.button3.Location = new System.Drawing.Point(857, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 40);
-            this.button3.TabIndex = 48;
-            this.button3.Text = "Закрыть Наряд";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1193, 134);
+            this.listBox1.Size = new System.Drawing.Size(1193, 439);
             this.listBox1.TabIndex = 47;
             // 
-            // button1
+            // label1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageKey = "94.png";
-            this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(687, 170);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 40);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Продлить Наряд";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(12, 467);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(247, 45);
+            this.label1.TabIndex = 50;
+            this.label1.Text = "{X} - Закрытый наряд\r\n№* - Не зарегистрированный наряд\r\n@ - Продленный наряд";
             // 
-            // fArhiveAcive
+            // fArhiveAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 226);
+            this.ClientSize = new System.Drawing.Size(1210, 529);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "fArhiveAcive";
-            this.Text = "Открытые наряды";
+            this.Name = "fArhiveAll";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Архив нарядов";
             this.Load += new System.EventHandler(this.fArhiveAcive_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -224,8 +207,7 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
