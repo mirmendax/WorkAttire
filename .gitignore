@@ -6,3 +6,5 @@
 *.exe
 WorkAttire/bin/Debug/WorkAttire.exe
 *.Cache
+WorkAttire/obj/Debug/WorkAttire.exe
+WorkAttire/obj/Debug/WorkAttire.pdb

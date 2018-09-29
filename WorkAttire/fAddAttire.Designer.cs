@@ -76,6 +76,7 @@
             this.bEditEmp = new System.Windows.Forms.Button();
             this.lAbout = new System.Windows.Forms.Label();
             this.bArhive = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -602,7 +603,7 @@
             this.bEditEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bEditEmp.ImageIndex = 0;
             this.bEditEmp.ImageList = this.imageList1;
-            this.bEditEmp.Location = new System.Drawing.Point(595, 493);
+            this.bEditEmp.Location = new System.Drawing.Point(592, 536);
             this.bEditEmp.Name = "bEditEmp";
             this.bEditEmp.Size = new System.Drawing.Size(284, 37);
             this.bEditEmp.TabIndex = 40;
@@ -629,13 +630,27 @@
             this.bArhive.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bArhive.ImageIndex = 8;
             this.bArhive.ImageList = this.imageList1;
-            this.bArhive.Location = new System.Drawing.Point(595, 553);
+            this.bArhive.Location = new System.Drawing.Point(592, 596);
             this.bArhive.Name = "bArhive";
             this.bArhive.Size = new System.Drawing.Size(284, 37);
             this.bArhive.TabIndex = 42;
             this.bArhive.Text = "Архив нарядов";
             this.bArhive.UseVisualStyleBackColor = true;
             this.bArhive.Click += new System.EventHandler(this.bArhive_Click);
+            // 
+            // button10
+            // 
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.ImageIndex = 8;
+            this.button10.ImageList = this.imageList1;
+            this.button10.Location = new System.Drawing.Point(595, 438);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(284, 37);
+            this.button10.TabIndex = 40;
+            this.button10.Text = "Работы по программе";
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // fAddAttire
             // 
@@ -644,6 +659,7 @@
             this.ClientSize = new System.Drawing.Size(894, 781);
             this.Controls.Add(this.bArhive);
             this.Controls.Add(this.lAbout);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.bEditEmp);
             this.Controls.Add(this.bAddAttire);
             this.Controls.Add(this.groupBox8);
@@ -654,7 +670,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "fAddAttire";
             this.Text = "Наряд-Допуск";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -727,6 +744,7 @@
         private System.Windows.Forms.Button bEditEmp;
         private System.Windows.Forms.Label lAbout;
         private System.Windows.Forms.Button bArhive;
+        private System.Windows.Forms.Button button10;
 
     }
 }
