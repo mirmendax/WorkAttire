@@ -10,7 +10,7 @@ using attirelib;
 
 namespace WorkAttire
 {
-    public partial class fArhiveAcive : Form
+    public partial class fArhiveAll : Form
     {
         #region Data
         public List<Attire> ListActive = new List<Attire>();
@@ -19,7 +19,7 @@ namespace WorkAttire
         public bool isEstended = false;
         public bool isClosed = false;
         #endregion
-        public fArhiveAcive()
+        public fArhiveAll()
         {
             InitializeComponent();
         }

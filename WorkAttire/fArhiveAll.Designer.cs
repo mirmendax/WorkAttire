@@ -1,6 +1,6 @@
 ﻿namespace WorkAttire
 {
-    partial class fArhiveAcive
+    partial class fArhiveAll
     {
         /// <summary>
         /// Required designer variable.
@@ -195,7 +195,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.ImageKey = "94.png";
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(678, 170);
+            this.button1.Location = new System.Drawing.Point(687, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 40);
             this.button1.TabIndex = 48;

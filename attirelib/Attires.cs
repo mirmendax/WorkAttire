@@ -77,10 +77,22 @@ namespace attirelib
         public bool VerifyedAtiire(string ID, int number)
         {
             bool result = false;
-            Attire temp = FindAttire(ID);
-            if (temp != null)
+            if (isAvaibleHash(ID))
+                FindAttire(ID).Number = number;
+            return result;
+        }
+        /// <summary>
+        /// Закрытие наряда
+        /// </summary>
+        /// <param name="ID">Уникальный номер наряда</param>
+        /// <returns></returns>
+        public bool ClosedAttire(string ID)
+        {
+            bool result = false;
+            if (isAvaibleHash(ID))
             {
-
+                FindAttire(ID).isClosed = true;
+                
             }
             return result;
         }
@@ -163,19 +175,19 @@ namespace attirelib
         /// <param name="DateOut">Продлить от даты</param>
         /// <param name="Days">Кол-во дней</param>
         /// <returns></returns>
-        public Attire ExtendAttire(string ID, DateTime DateOut, int Days)
+        public bool ExtendAttire(string ID, DateTime DateOut, int Days)
         {
-            Attire result = new Attire();
+            bool result = false;
             Attire temp = FindAttire(ID);
             if (temp != null)
             {
                 temp.isExtend = true;
                 if (Days > 15) Days = 15;
                 temp.Date_Time_End_Extend = DateOut.AddDays(Days);
-                result = temp;
+                result = true;
 
             }
-            else result = null;
+            else result = false;
             return result;
         }
 

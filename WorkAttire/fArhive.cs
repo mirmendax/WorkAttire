@@ -87,6 +87,13 @@ namespace WorkAttire
             fArhiveAcive fAcive = new fArhiveAcive();
             fAcive.ListActive = Data.ListOpenedAttire();
             fAcive.ShowDialog();
+            if (fAcive.isClosed)
+            {
+                foreach (var item in fAcive.ClosedAttire)
+                {
+                    Data.ClosedAttire(item.ID);
+                }
+            }
         }
     }
 }

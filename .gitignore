@@ -1,2 +1,3 @@
-attirelib\bin\*
-WorkAttire\bin\*
+/attirelib/bin/*
+/WorkAttire/bin/*
+/WorkAttire/obj/*

@@ -32,3 +32,5 @@ D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fEmployes.resources
 D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fSec_Measure.resources
 D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.Properties.Resources.resources
 D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.csproj.GenerateResource.Cache
+D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fExtended_Data.resources
+D:\GitHub\WorkAttire\WorkAttire\obj\Debug\WorkAttire.fArhiveAll.resources

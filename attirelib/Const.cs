@@ -19,11 +19,14 @@ namespace attirelib
         public static string FORMAT_DATA = "dd.MM.yy";
         public static string FORMAT_TIME = "HH.mm";
         public static string FORMAT_ABOUT = "WorkAttire {0} Programming [MIR] Mendax (c) 2006-2018// СТСУ уч. ТАиВ";
-        public static int FORMAT_ESTR_LENGTH = 150;
+        public static string FORMAT_EXTENDED_CHAR = "@ ";
+        public static string FORMAT_ACTIVE_ATTIRE_LIST = "{0}{1} >> {2} -> {3}: [{4}] {5} - {6}...";
+        public static int FORMAT_ESTR_LENGTH = 130;
         
         /* Other  */
         public static int DAYS_ATTIRE = 14;
         public static string BR_OUT_DIAPOSON = "В бригаде достаточно членов!";
+        public static string ATTIRE_IS_EXTENDED = "Наряд уже был продлен.";
         public enum RULE
         {
             /// <summary>

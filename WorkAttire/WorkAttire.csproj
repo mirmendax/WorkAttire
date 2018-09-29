@@ -62,6 +62,12 @@
     <Compile Include="fArhive.Designer.cs">
       <DependentUpon>fArhive.cs</DependentUpon>
     </Compile>
+    <Compile Include="fArhiveAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fArhiveAll.Designer.cs">
+      <DependentUpon>fArhiveAll.cs</DependentUpon>
+    </Compile>
     <Compile Include="fArhiveAcive.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,12 @@
     <Compile Include="fEmployes.Designer.cs">
       <DependentUpon>fEmployes.cs</DependentUpon>
     </Compile>
+    <Compile Include="fExtended_Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fExtended_Data.Designer.cs">
+      <DependentUpon>fExtended_Data.cs</DependentUpon>
+    </Compile>
     <Compile Include="fSec_Measure.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +115,9 @@
     <EmbeddedResource Include="fArhive.resx">
       <DependentUpon>fArhive.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fArhiveAll.resx">
+      <DependentUpon>fArhiveAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fArhiveAcive.resx">
       <DependentUpon>fArhiveAcive.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fEmployes.resx">
       <DependentUpon>fEmployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fExtended_Data.resx">
+      <DependentUpon>fExtended_Data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fSec_Measure.resx">
       <DependentUpon>fSec_Measure.cs</DependentUpon>
