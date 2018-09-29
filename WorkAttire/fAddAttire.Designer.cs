@@ -654,6 +654,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fAddAttire";
             this.Text = "Наряд-Допуск";
             this.Load += new System.EventHandler(this.Form1_Load);
