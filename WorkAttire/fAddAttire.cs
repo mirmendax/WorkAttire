@@ -477,7 +477,7 @@ namespace WorkAttire
             fListAttire.Data = ListAttire;
             fListAttire.ShowDialog();
             ListAttire = fListAttire.Data;
-            //ListAttire.Save();
+            ListAttire.Save();
         }
 
         private void button12_Click(object sender, EventArgs e)

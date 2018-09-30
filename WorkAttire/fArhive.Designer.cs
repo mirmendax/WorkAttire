@@ -207,7 +207,7 @@
             this.lCountAttire.Name = "lCountAttire";
             this.lCountAttire.Size = new System.Drawing.Size(13, 13);
             this.lCountAttire.TabIndex = 43;
-            this.lCountAttire.Text = "1";
+            this.lCountAttire.Text = "0";
             // 
             // label7
             // 
