@@ -3,3 +3,7 @@ D:\GitHub\WorkAttire\attirelib\bin\Release\attirelib.pdb
 D:\GitHub\WorkAttire\attirelib\obj\Release\attirelib.dll
 D:\GitHub\WorkAttire\attirelib\obj\Release\attirelib.pdb
 D:\GitHub\WorkAttire\attirelib\obj\Release\attirelib.csprojResolveAssemblyReference.cache
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\bin\Release\attirelib.dll
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\bin\Release\attirelib.pdb
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\obj\Release\attirelib.dll
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\obj\Release\attirelib.pdb

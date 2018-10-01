@@ -93,6 +93,7 @@ namespace WorkAttire
                 {
                     Data.ClosedAttire(item.ID);
                 }
+                onRewrite();
             }
         }
 

@@ -8,3 +8,8 @@ D:\GitHub\WorkAttire\attirelib\bin\Debug\attirelib.pdb
 D:\GitHub\WorkAttire\attirelib\obj\Debug\attirelib.csprojResolveAssemblyReference.cache
 D:\GitHub\WorkAttire\attirelib\obj\Debug\attirelib.dll
 D:\GitHub\WorkAttire\attirelib\obj\Debug\attirelib.pdb
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\bin\Debug\attirelib.dll
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\bin\Debug\attirelib.pdb
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\obj\Debug\attirelib.csprojResolveAssemblyReference.cache
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\obj\Debug\attirelib.dll
+C:\Users\АНТОН\Desktop\Work\WorkAttire\attirelib\obj\Debug\attirelib.pdb
