@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkAttire", "WorkAttire\Wo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "attirelib", "attirelib\attirelib.csproj", "{D1059EB6-9264-4404-A575-E5970452B68A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification", "Notification\Notification.csproj", "{DE3E8A13-CEB3-4EE5-B96E-B2417C76C418}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D1059EB6-9264-4404-A575-E5970452B68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1059EB6-9264-4404-A575-E5970452B68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1059EB6-9264-4404-A575-E5970452B68A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3E8A13-CEB3-4EE5-B96E-B2417C76C418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3E8A13-CEB3-4EE5-B96E-B2417C76C418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3E8A13-CEB3-4EE5-B96E-B2417C76C418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3E8A13-CEB3-4EE5-B96E-B2417C76C418}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

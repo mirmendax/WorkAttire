@@ -1,0 +1,10 @@
+D:\GitHub\WorkAttire\Notification\bin\Debug\Notification.exe.config
+D:\GitHub\WorkAttire\Notification\bin\Debug\Notification.exe
+D:\GitHub\WorkAttire\Notification\bin\Debug\Notification.pdb
+D:\GitHub\WorkAttire\Notification\bin\Debug\attirelib.dll
+D:\GitHub\WorkAttire\Notification\bin\Debug\attirelib.pdb
+D:\GitHub\WorkAttire\Notification\obj\Debug\Notification.csprojResolveAssemblyReference.cache
+D:\GitHub\WorkAttire\Notification\obj\Debug\Notification.Properties.Resources.resources
+D:\GitHub\WorkAttire\Notification\obj\Debug\Notification.csproj.GenerateResource.Cache
+D:\GitHub\WorkAttire\Notification\obj\Debug\Notification.exe
+D:\GitHub\WorkAttire\Notification\obj\Debug\Notification.pdb

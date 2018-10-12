@@ -349,7 +349,8 @@ namespace WorkAttire
                 }
                 temp = new DateTime(temp.Year, temp.Month, temp.Day, 8, 0, 0);
                 CurrentAttire.Date_Time_Begin = temp;
-                temp = new DateTime(temp.Year, temp.Month, temp.Day + Const.DAYS_ATTIRE, 17, 0, 0);
+                temp = temp.AddDays(Const.DAYS_ATTIRE);
+                temp = new DateTime(temp.Year, temp.Month, temp.Day, 17, 0, 0);
                 CurrentAttire.Date_Time_End = temp;
                 
                 onRewrite();

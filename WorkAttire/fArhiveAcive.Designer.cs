@@ -182,10 +182,12 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1193, 134);
+            this.listBox1.Size = new System.Drawing.Size(1193, 124);
             this.listBox1.TabIndex = 47;
             // 
             // button1
@@ -214,6 +216,7 @@
             this.Controls.Add(this.listBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fArhiveAcive";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Открытые наряды";
             this.Load += new System.EventHandler(this.fArhiveAcive_Load);
             this.ResumeLayout(false);
