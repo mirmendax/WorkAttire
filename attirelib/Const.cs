@@ -82,6 +82,17 @@ namespace attirelib
             
         }
 
+        public enum TYPE_NOTIFICATION
+        {
+            None = 0,
+
+            One = 10,
+
+            Two = 20,
+
+            End = 30
+        }
+
         public static string getId(string s = "")
         {
             Random r = new Random();
